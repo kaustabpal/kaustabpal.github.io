@@ -144,23 +144,17 @@ For a matrix $$A$$ with m rows and n columns, $$A^T$$ will have n rows and m col
 
 # Orthogonality
 
-Two vectors $$x$$ and $$y$$ are said to be orthogonal if $$x^Ty=0$$. Orthogonal means perpendicular, i.e. the vectors $$x$$ and $$y$$ are perpendicular to each other. All vectors are orthogonal to the zero vector.
+Two vectors $$\vec{x}$$ and $$\vec{y}$$ are said to be orthogonal if $$\vec{x}^T\vec{y}=0$$. Orthogonal means perpendicular, i.e. the vectors $$\vec{x}$$ and $$\vec{y}$$ are perpendicular to each other. All vectors are orthogonal to the zero vector.
 
-Two subspaces $$S$$ and $$T$$ are said to be orthogonal to each other if all the vectors in subspace $$S$$ are orthogonal to all the vectors in subspace $$T$$. For example, the row space of a matrix is orthogonal to the nullspace of that matrix and the column space of that matrix is perpendicular to the left null space of that matrix.
-
-The second part of the fundamental theorem of Linear Algebra states that:
-
-- In the vector space $$R^n$$, the null space of a matrix is orthogonal to the row space of that matrix.
-
-- In the vector space $$R^m$$, the left null space of a matrix is orthogonal to the column space of that matrix.
+Two subspaces $$S$$ and $$T$$ are said to be orthogonal to each other if all the vectors in subspace $$S$$ are orthogonal to all the vectors in subspace $$T$$. For example, the row space of a matrix is orthogonal to the nullspace of that matrix and the column space of that matrix is orthogonal to the left null space of that matrix.
 
 # Projections
 
-Sometimes due to measurement error, the equation $$Ax=b$$ may have no solution especially when the number of rows is greater than the number of columns. The vector $$Ax$$ is in the column space of $$A$$ but the vector $$b$$ might not be. So to find the best possible solution, we project vector $$b$$ onto a vector $$p$$. The vector $$p$$ lies in the column space of $$Ax$$. We then solve for $$A\hat{x}=p$$ where $$\hat{x}$$ is the best possible solution for $$Ax=b$$.
+The equation $$A\vec{x}=\vec{b}$$ will have a solution only when $$\vec{b}$$ lies on the column space of $$A$$. However sometimes, due to measurement error, $$\vec{b}$$ might not lie on the column space of $$A$$ and therefore $$A\vec{x}=\vec{b}$$ will have no solution. So to find the best possible solution, we project vector $$\vec{b}$$ onto a vector $$\vec{p}$$. The vector $$\vec{p}$$ lies on the column space of $$A\vec{x}$$. We then solve for $$A\vec{\hat{x}}=\vec{p}$$ where $$\vec{\hat{x}}$$ is the best possible solution for $$A\vec{x}=\vec{b}$$.
 
 ![Projection](/assets/img/projection.jpg)
 
-If we have a vector $$\vec{b}$$ and a line determined by a vector $$\vec{a}$$, we do the projection of $$\vec{b}$$ to find the vector $$\vec{p}$$ on line $$\vec{a}$$ that is closest to $$\vec{b}$$.
+If we have a vector $$\vec{b}$$ and a line determined by a vector $$\vec{a}$$, we do the projection of $$\vec{b}$$ on line $$\vec{a}$$ to find the vector $$\vec{p}$$.
 
 Here, the vector $$\vec{p}$$ is a scalar multiple of vector $$\vec{a}$$.
 
@@ -182,8 +176,6 @@ x=\dfrac{\vec{a^T}\vec{b}}{\vec{a^T}\vec{a}}$$
 Therefore we can write
 
 $$\vec{p}=\vec{a}x \implies \vec{p}=\dfrac{\vec{a}\vec{a^T}\vec{b}}{\vec{a^T}\vec{a}}$$
-
-If we double the vector $$\vec{b}$$, $$\vec{p}$$ doubles. However, if we double $$\vec{a}$$, $$\vec{p}$$ remains unchanged.
 
 ## Projection matrix
 
