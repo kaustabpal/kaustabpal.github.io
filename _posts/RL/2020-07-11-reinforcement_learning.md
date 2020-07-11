@@ -84,7 +84,7 @@ for n_epi in range(total_episodes):
 For our environment we will be using OpenAI gym's CartPole-v1 environment. Description of the environment from [OpenAI gym's website](https://gym.openai.com/envs/CartPole-v1/) is as follows:
 > A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
 
-Each observation in our environment is an array of $$4$$ numbers where each number represents the cart position, cart velocity, pole angle and pole angular velocity respectively. Example of an observation:
+Each observation in our environment is an array of 4 numbers where each number represents the cart position, cart velocity, pole angle and pole angular velocity respectively. Example of an observation:
 ```
 [-0.061586   -0.75893141  0.05793238  1.15547541]
 ```
@@ -472,7 +472,7 @@ The smaller the value of TAU, the closer the updated target network will be to t
 
 **Conclusion 1:**
 
-From Observations 1, it can be seen that the DQN performance never converges when TAU is between $$0.1$$ and $$0.001$$. It is because since the target network Q-target is updated every time the main Q-network is trained; if the changes in the target network are big, the main Q-network will be converging towards a constantly fluctuating target thus making the model unstable. However, when the value of TAU is $$0.0001$$, the performance of the DQN agent improves. It is because even though Q-target is updated frequently, it is changing by very very small amounts, which is why the main Q-network is converging towards an almost constant target and thus the model slowly stabilizes over time and the performance improves.
+From Observations 1, it can be seen that the DQN performance never converges when TAU is between 0.1 and 0.001. It is because since the target network Q-target is updated every time the main Q-network is trained; if the changes in the target network are big, the main Q-network will be converging towards a constantly fluctuating target thus making the model unstable. However, when the value of TAU is 0.0001, the performance of the DQN agent improves. It is because even though Q-target is updated frequently, it is changing by very very small amounts, which is why the main Q-network is converging towards an almost constant target and thus the model slowly stabilizes over time and the performance improves.
 
 Conclusion 1 is confirmed by running a validation experiment with TAU = 0.0001 for MINI_BATCH_SIZE of 64 as it will take less time to train using a smaller MINI_BATCH_SIZE.
 
