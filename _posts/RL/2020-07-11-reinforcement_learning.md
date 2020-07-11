@@ -154,7 +154,7 @@ if __name__=="__main__":
 
 ```
 
-### The replay buffer class
+### The replay buffer class:
 
 For the replay buffer we are using a dequeue. The replay buffer class should contain a method to insert the experience data into the dequeue, a method to return the present size of the buffer and a method to sample from the buffer and return a mini-batch of experiences.
 
@@ -186,7 +186,7 @@ class ReplayBuffer: # Replay buffer class
         return len(self.buffer)
 ```
 
-### The DQN class
+### The DQN class:
 
 For the DQN class we will be using a 3 layered neural network. The number of nodes in the input layer is the same as the observation space and the number of nodes in the output layer is the same as the action space. The activation functions of the first two hidden layers are relu and the activation function of the output layer is linear. The optimizer used is Adam and the loss function is mean squared error. 
 
@@ -419,7 +419,7 @@ To confirm this, we run a validation experiment with UPDATE_TARGET_INTERVAL = 10
 **Observation 2:**
 
 ![](/assets/img/RL/DQN/new_hard_update_100.png)
-*Plot 3_e: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is hard updated with UPDATE_TARGET_INTERVAL = 100.*
+*Plot 3_e: Rewards vs Episodes plot to show the performance of the DQN agent under a different random seed value when the target network is hard updated with UPDATE_TARGET_INTERVAL = 100.*
 
 **Conclusion 2:**
 
@@ -474,7 +474,7 @@ The smaller the value of TAU is, the closer the updated target network will be t
 
 From Observations 1, it can be seen that the DQN performance never converges when TAU is between $$0.1$$ and $$0.001$$. It is because since the target network Q-target is updated every time the main Q-network is trained; if the changes in the target network are big, the main Q-network will be converging towards a constantly fluctuating target thus making the model unstable. However, when the value of TAU is $$0.0001$$, the performance of the DQN agent improves. It is because even though Q-target is updated frequently, it is changing by very very small amounts, which is why the main Q-network is converging towards an almost constant target and thus the model slowly stabilizes over time and the performance improves.
 
-Conclusion 1 is confirmed by running a validation experiment with TAU = 0.0001. From Observations 1 it is clear that as the MINI_BATCH_SIZE keeps increasing, the performance improves quicker. So in this validation experiment, I use only one MINI_BATCH_SIZE. While bigger MINI_BATCH_SIZE improves performance, it also needs more time to train the neural network. Therefore I will be using a MINI_BATCH_SIZE of 64.
+Conclusion 1 is confirmed by running a validation experiment with TAU = 0.0001 for MINI_BATCH_SIZE of 64 as it will take less time to train using a smaller MINI_BATCH_SIZE.
 
 **Observation 2:**
 
@@ -497,7 +497,7 @@ In all of the above experiments, for all the hyperparameter values for which the
 
 ### **Experiment 5: Increase the number of hidden layers**
 
-In this experiment, the number of hidden layer is increased while keeping the NUMBER_OF_UNITS constant. Each hidden layer will use the ReLU activation function. From all the above experiments we will take only those hyperparameter values that lead to the best performance of the DQN agent. We notice that the DQN agent performs better and in a more stable way if we perform soft updates with TAU = 0.0001. While performing soft updates, we noticed that as the MINI_BATCH_SIZE increases, the performance improves quickly, so we will be using a MINI_BATCH_SIZE of 256 here along with soft updating the target network with TAU = 0.0001.
+In this experiment, the number of hidden layers is increased while keeping the NUMBER_OF_UNITS constant. Each hidden layer will use the ReLU activation function. From all the above experiments we will take only those hyperparameter values that lead to the best performance of the DQN agent. We notice that the DQN agent performs better and in a more stable way if we perform soft updates with TAU = 0.0001. While performing soft updates, we noticed that as the MINI_BATCH_SIZE increases, the performance improves quickly, so we will be using a MINI_BATCH_SIZE of 256 here along with soft updating the target network with TAU = 0.0001.
 
 We will be using the following number of hidden layers:
 ```python
@@ -511,7 +511,7 @@ Increasing the number of hidden layers should improve the performance but after 
 **Observations 1:**
 
 ![](/assets/img/RL/DQN/hidden_layer.png)
-*Plot 5_a: Rewards vs Episodes plot to show the performance of the DQN agent when the number of hidden layer is varied.*
+*Plot 5_a: Rewards vs Episodes plot to show the performance of the DQN agent when the number of hidden layers is varied.*
 
 **Conclusion 1:**
 
