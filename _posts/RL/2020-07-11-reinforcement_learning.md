@@ -11,7 +11,7 @@ excerpt: "In tabular Q-learning, we maintain a table that contains the Q-values 
 
 # Theory
 
-In tabular Q-learning, we maintain a table that contains the Q-values for all the actions we can perform in a particular state. As the state space keeps increasing the space-complexity of tabular Q-learning increases as well and after a certain point it becomes very inefficient. To solve this, we use a deep neural network to estimate the Q-values. The deep neural network takes in the current state as input and outputs the Q-values of the actions. We select the action with the maximum Q-value. Since neural networks are good function approximators, similar states will give us similar Q-values. In DQN instead of updating a Q-table we update the parameters of the neural network to make better predictions. The parameter updates are done by gradient descent $$(target - Q(\text{current\_state}))^2.$$ 
+In tabular Q-learning, we maintain a table that contains the Q-values for all the actions we can perform in a particular state. As the state space keeps increasing, the space-complexity of tabular Q-learning increases as well and after a certain point it becomes very inefficient. To solve this, we use a deep neural network to estimate the Q-values. The deep neural network takes in the current state as input and outputs the Q-values of the actions. We select the action with the maximum Q-value. Since neural networks are good function approximators, similar states will give us similar Q-values. In DQN instead of updating a Q-table we update the parameters of the neural network to make better predictions. The parameter updates are done by gradient descent $$(target - Q(\text{current\_state}))^2.$$ 
 
 The target of the loss function is given by 
 
@@ -28,7 +28,7 @@ target  = r + DISCOUNT_FACTOR * np.amax(Q(next_state))
 
 ### Solution for limitation 1
 
-To solve the problem of a constantly changing target we use another Q-network called Q-target to calculate the target values. As the agent interacts with the environment it uses the main Q-network to select the actions. After every episode the main Q-network's weights are updated by gradient descent $$(target - Q(\text{current\_state}))^2$$, where the $$target$$ is calculated from the Q-target network. The Q-target network is updated to the weights of the constantly updated main Q-network after long intervals to give the main Q-network time to converge to a target. The interval after which the Q-target network is updated is another hyperparameter that needs to be adjusted.
+To solve the problem of a constantly changing target we use another Q-network called Q-target to calculate the target values. As the agent interacts with the environment, it uses the main Q-network to select the actions. After every episode the main Q-network's weights are updated by gradient descent $$(target - Q(\text{current\_state}))^2$$, where the $$target$$ is calculated from the Q-target network. The Q-target network is updated to the weights of the constantly updated main Q-network after long intervals to give the main Q-network time to converge to a target. The interval after which the Q-target network is updated is another hyperparameter that needs to be adjusted.
 
 Another way we can update the Q-target network is through soft-updates. Here everytime we update the Q-network, we update the weights of the Q-target slightly towards the weight of the main Q-network. It can be represented as
 ``` python
@@ -93,7 +93,7 @@ Our action space consists of 2 discreete actions, left (0) and right (1).
 
 # Code implementation
 
-For implementing the algorithm, I used Tensorflow for writing the Deep Neural Net. The Tensorflow version I am using is 2.2.0.
+For implementing the algorithm, I used Tensorflow for writing the Q-network which is a deep neural net. The Tensorflow version I am using is 2.2.0.
 
 ### The main function:
 
@@ -273,7 +273,7 @@ class Qnet: # Q-network class
 
 - *Validation Experiment*: For the experiments where the performance seems to be improving, a validation experiment will be run with a different random seed value to get a different weight initialization for the neural networks. If the performance improves for one random seed value, it should improve for other random seed values as well.
 
-- In all experiments except the final, the neural network will have two hidden layers each of size 64. 
+- In all experiments except experiment 5, the neural network will have two hidden layers each of size 64. 
 
 - In each experiment, the epsilon will go from 0.99 to 0.01 in the first 200 episodes and the training will start only when the replay buffer contains a minimum of 1000 experiences. 
 
@@ -300,7 +300,7 @@ NUMBER_OF_UNITS = 64 # number of units in each hidden layer
 <br>
 **Hypothesis for MINI_BATCH_SIZE:** 
 
-As the MINI_BATCH_SIZE is increased, the performance for that particular experiment will become better. The reason being the MINI_BATCH_SIZE is the number of training data that will be sampled from the experience replay buffer and used to train our neural network. If the training data size increases, the neural network will be able to learn better and also the chances of training on the same data will increase which will lead to a better learning.
+As the MINI_BATCH_SIZE is increased, the performance for that particular experiment will become better. The reason being the MINI_BATCH_SIZE is the number of training data that will be randomly sampled from the experience replay buffer and used to train our neural network. If the training data size increases, the neural network will be able to learn better and also the chances of training on the same data will increase which will lead to a better learning.
 
 Each experiment will be run for the following values of MINI_BATCH_SIZE:
 ``` python
@@ -446,7 +446,7 @@ TAU = 0.1, 0.01, 0.001, 0.0001
 
 **Hypothesis:**
 
-The smaller the value of TAU is, the closer the updated target network will be to the old target network. Although the target network weights will change constantly, the changes will be very small and thus will lead to a more stable performance.
+The smaller the value of TAU, the closer the updated target network will be to the old target network. Although the target network weights will change constantly, the changes will be very small and thus will lead to a more stable performance.
 
 **Observations 1:**
 
@@ -520,7 +520,7 @@ We start with 1 hidden layer and keep increasing till 4 hidden layers. The perfo
 **Observations 2:**
 
 ![](/assets/img/RL/DQN/new_hidden_layer.png)
-*Plot 5_b: Rewards vs Episodes plot to show the performance of the DQN agent under a different seed value when the number of hidden layers is 2.*
+*Plot 5_b: Rewards vs Episodes plot to show the performance of the DQN agent under a different random seed value when the number of hidden layers is 2.*
 
 **Conslusion 2:**
 
