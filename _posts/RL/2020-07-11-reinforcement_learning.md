@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "[RL] Experiments with DQN"
+title: "Experiments with DQN"
+tags: reinforcement-learning 
 permalink: "dqn"
 excerpt: "In tabular Q-learning, we maintain a table that contains the Q-values for all the actions we can perform in a particular state. As the state space keeps increasing the space-complexity of tabular Q-learning increases as well and after a certain point it becomes very inefficient. To solve this, we use a deep neural network to estimate the Q-values. The deep neural network takes in the current state as input and outputs the Q-values of the actions. We select the action with the maximum Q-value. Since neural networks are good function approximators, similar states will give us similar Q-values. In DQN instead of updating a Q-table we update the parameters of the neural network to make better predictions."
 

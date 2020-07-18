@@ -2,6 +2,7 @@
  * Site header
  */
 .site-header {
+  border-top: 1px solid #fdfdfd;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
@@ -196,10 +197,27 @@
 .post-meta {
   @include relative-font-size(1);
   color: $grey-color;
+
+  a.post-tag {
+    @include relative-font-size(0.95);
+    border-radius: 5px;
+    border: 1px solid $grey-color;
+    color: $grey-color;
+    padding: 1px 5px;
+    margin-left: 5px;
+    &:hover {
+      border: 1px solid #111;
+      text-decoration: none;
+      color: #fdfdfd;
+      background: #111;
+    }
+  }
 }
 
 .post-link {
-  @include relative-font-size(1);
+  display: block;
+  padding-top: 5px;
+  @include relative-font-size(1.25);
 }
 
 

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "[M] Linear Algebra"
+title: "Linear Algebra"
+tags: maths 
 permalink: "linear_algebra"
 excerpt: "An overview of the concepts of Linear Algebra."
 
