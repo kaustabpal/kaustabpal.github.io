@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 1px solid #fdfdfd;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid rgb(78, 78, 78);
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -103,7 +103,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid rgb(78, 78, 78);
   padding: $spacing-unit 0;
 }
 
@@ -208,8 +208,8 @@
     &:hover {
       border: 1px solid #111;
       text-decoration: none;
-      color: #fdfdfd;
-      background: #111;
+      color: #222;
+      background: #c8c8c8;
     }
   }
 }

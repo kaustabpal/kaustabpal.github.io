@@ -33,7 +33,7 @@ linkedin_username: kaustabpal
 theme: minima
 plugins:
   - jekyll-feed
-
+highlighter: rouge
 defaults:
   -
     scope:
