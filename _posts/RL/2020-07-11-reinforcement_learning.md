@@ -47,6 +47,7 @@ To solve the problem of correlated data we use an experience replay buffer. We s
 ## DQN Architecture
 
 ![](/assets/img/RL/DQN/DQNarchitecture.png)
+
 *Fig 1: DQN Architecture. Image source: [Nair, Arun, et al. "Massively parallel methods for deep reinforcement learning."](https://arxiv.org/abs/1507.04296)*
 
 ## DQN Algorithm
@@ -281,6 +282,7 @@ class Qnet: # Q-network class
 - The agent's performance after every 10 episodes of training will be tested on a seperate test environment where the agent will be run for 10 episodes and it's mean reward will be used to determine the performance. 
 
 - All the plots will be smoothened to show the trend of the performance. The smoothening formula I have used is: 
+
 ```python
 score[i] = beta * score[i-1] + (1 - beta) * score[i] 
 # 0 <= beta < 1. 
@@ -290,6 +292,7 @@ score[i] = beta * score[i-1] + (1 - beta) * score[i]
 - Each experiment will be repeated with the MINI_BATCH_SIZE changed to see how the DQN agent's performance varies in that experiment when the MINI_BATCH_SIZE varies. 
 
 - Hyperparameters that stay constant throughout all experiments:
+
 ```python
 BUFFERLIMIT = 40_000
 LEARNING_RATE = 0.0005
@@ -338,6 +341,7 @@ Since the targets are being calculated using the same neural network, they keep 
 **Observation:**
 
 ![](/assets/img/RL/DQN/No_target.png)
+
 *Plot 1: Rewards vs Episodes plot to show the performance of the DQN agent when there is no target network.*
 
 **Conclusion:**
@@ -357,6 +361,7 @@ The target network Q-target is initialized to the weights of the main Q-network 
 **Observation 1:**
 
 ![](/assets/img/RL/DQN/No_update.png)
+
 *Plot 2_a: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is not updated.*
 
 **Conclusion 1:**
@@ -366,7 +371,9 @@ The observation does not support the hypothesis. Theoritically, the main Q-netwo
 To confirm this a validation experiment is run. From Observation 1 it is clear that as the MINI_BATCH_SIZE keeps increasing the performance improves quicker so in this experiment I will use only one MINI_BATCH_SIZE. While bigger MINI_BATCH_SIZE improves performance, it also needs more time to train the neural network. Therefore I will be using a MINI_BATCH_SIZE of 64.
 
 **Observation 2:**
+
 ![](/assets/img/RL/DQN/No_update_different_seed.png)
+
 *Plot 2_b: Rewards vs Episodes plot to show the performance of the DQN agent with different random seed value when the target network is not updated.*
 
 **Conclusion 2:**
@@ -394,21 +401,25 @@ If UPDATE_TARGET_INTERVAL is too small, the target network Q-target will change 
 **1. UPDATE_TARGET_INTERVAL = 20**
 
 ![](/assets/img/RL/DQN/hard_update_20.png)
+
 *Plot 3_a: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is hard updated with UPDATE_TARGET_INTERVAL = 20.*
 
 **2. UPDATE_TARGET_INTERVAL = 50**
 
 ![](/assets/img/RL/DQN/hard_update_50.png)
+
 *Plot 3_b: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is hard updated with UPDATE_TARGET_INTERVAL = 50.*
 
 **3. UPDATE_TARGET_INTERVAL = 100**
 
 ![](/assets/img/RL/DQN/hard_update_100.png)
+
 *Plot 3_c: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is hard updated with UPDATE_TARGET_INTERVAL = 100.*
 
 **4. UPDATE_TARGET_INTERVAL = 200**
 
 ![](/assets/img/RL/DQN/hard_update_200.png)
+
 *Plot 3_d: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is hard updated with UPDATE_TARGET_INTERVAL = 200.*
 
 **Conclusion 1:**
@@ -420,6 +431,7 @@ To confirm this, we run a validation experiment with UPDATE_TARGET_INTERVAL = 10
 **Observation 2:**
 
 ![](/assets/img/RL/DQN/new_hard_update_100.png)
+
 *Plot 3_e: Rewards vs Episodes plot to show the performance of the DQN agent under a different random seed value when the target network is hard updated with UPDATE_TARGET_INTERVAL = 100.*
 
 **Conclusion 2:**
@@ -454,21 +466,25 @@ The smaller the value of TAU, the closer the updated target network will be to t
 **1. TAU = 0.1**
 
 ![](/assets/img/RL/DQN/soft_update_tau0_1.png)
+
 *Plot 4_a: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is soft updated with TAU = 0.1.*
 
 **2. TAU = 0.01**
 
 ![](/assets/img/RL/DQN/soft_update_tau0_01.png)
+
 *Plot 4_b: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is soft updated with TAU = 0.01.*
 
 **3. TAU = 0.001**
 
 ![](/assets/img/RL/DQN/soft_update_tau0_001.png)
+
 *Plot 4_c: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is soft updated with TAU = 0.001.*
 
 **4. TAU = 0.0001**
 
 ![](/assets/img/RL/DQN/soft_update_tau0_0001.png)
+
 *Plot 4_d: Rewards vs Episodes plot to show the performance of the DQN agent when the target network is soft updated with TAU = 0.0001.*
 
 **Conclusion 1:**
@@ -480,6 +496,7 @@ Conclusion 1 is confirmed by running a validation experiment with TAU = 0.0001 f
 **Observation 2:**
 
 ![](/assets/img/RL/DQN/new_soft_update_tau0_0001.png)
+
 *Plot 4_e: Rewards vs Episodes plot to show the performance of the DQN agent under a different seed value when the target network is soft updated with TAU = 0.0001.*
 
 **Conclusion 2:**
@@ -512,6 +529,7 @@ Increasing the number of hidden layers should improve the performance but after 
 **Observations 1:**
 
 ![](/assets/img/RL/DQN/hidden_layer.png)
+
 *Plot 5_a: Rewards vs Episodes plot to show the performance of the DQN agent when the number of hidden layers is varied.*
 
 **Conclusion 1:**
@@ -521,6 +539,7 @@ We start with 1 hidden layer and keep increasing till 4 hidden layers. The perfo
 **Observations 2:**
 
 ![](/assets/img/RL/DQN/new_hidden_layer.png)
+
 *Plot 5_b: Rewards vs Episodes plot to show the performance of the DQN agent under a different random seed value when the number of hidden layers is 2.*
 
 **Conslusion 2:**
@@ -580,4 +599,3 @@ The full working code can be found [here](https://github.com/kaustabpal/RL_algor
 [2] [Mnih et al. "Human-level control through deep reinforcement learning."](https://deepmind.com/research/publications/human-level-control-through-deep-reinforcement-learning){:target="_blank"}
 
 [3] [Lillicrap et al. "Continuous control with deep reinforcement learning."](https://arxiv.org/abs/1509.02971){:target="_blank"}
-
