@@ -17,8 +17,7 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
-
+  color: $text-color;
 }
 
 .site-nav {
@@ -103,8 +102,12 @@
  * Site footer
  */
 .site-footer {
+  
   border-top: 1px solid rgb(78, 78, 78);
   padding: $spacing-unit 0;
+  a{
+    color: $text-color;
+  }
 }
 
 .footer-heading {
@@ -134,11 +137,13 @@
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width:         calc(35% - (#{$spacing-unit} / 2));
+  
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+  
 }
 
 .footer-col-3 {
@@ -215,6 +220,7 @@
 }
 
 .post-link {
+  color: $text-color;
   display: block;
   padding-top: 5px;
   @include relative-font-size(1.25);
