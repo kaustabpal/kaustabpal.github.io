@@ -8,5 +8,5 @@ I am a M.S. by Research student in <a href="https://www.iiit.ac.in/">IIIT, Hyder
 
 Previously I was associated with <a href="https://www.tcs.com/research-and-innovation">TCS Research & Innovation</a>, as part of the embedded robotics group.
 
-I am documenting my learning notes on various topics in this blog. 
+I like learning about new concepts through experimentations. Through this blog, I intend to present my experimentation notes on various topics that interests me.
 
