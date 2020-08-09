@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: 'Share Tech Mono', Monospace, Courier; /* Linux = DejaVu Sans Mono */
+$base-font-family: 'Roboto', sans-serif;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -10,11 +10,11 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #c8c8c8 !default;
-$background-color: #222 !default;
+$text-color:       #000000 !default;
+$background-color: #FFFFFF !default;
 $brand-color:      #c8c8c8 !default;
 
-$grey-color:       #828282 !default;
+$grey-color:       #797979 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
