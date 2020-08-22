@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Experiments with DQN"
-tags: reinforcement-learning off-policy
+tags: reinforcement-learning
 permalink: "dqn"
 excerpt: "Observations on how DQN performs when hyperparameters related to it's target network are varied."
 
