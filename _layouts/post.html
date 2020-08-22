@@ -18,9 +18,14 @@ layout: default
           {% capture tag_name %}{{ tag }}{% endcapture %}
           <a class="post-tag" href="/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
         {% endfor %}
-      </span></p>
+      </span>
+      <span>
+        <hr>
+      </span>
+    </p>
+      
   </header>
-
+ 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
     
