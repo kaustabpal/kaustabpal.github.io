@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding rotation matrices"
-excerpt: "An explanation about how a vector's coordinate system is are rotated with respect to a reference coordinate system."
+excerpt: "An explanation about how a vector's coordinate system is rotated with respect to a reference coordinate system."
 tags: maths
 ---
 - *For the sake of making the explanations easier, we will be working on the two dimensional coordinate plane $$R^2$$. The same explanations work on higher-dimensional spaces as well.*
