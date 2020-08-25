@@ -309,8 +309,8 @@ Two subspaces $$S$$ and $$T$$ are said to be orthogonal to each other if all the
 
 The equation $$A\boldsymbol{x}=\boldsymbol{b}$$ will have a solution only when $$\boldsymbol{b}$$ lies on the column space of $$A$$. However sometimes, due to measurement error, $$\boldsymbol{b}$$ might not lie on the column space of $$A$$ and therefore $$A\boldsymbol{x}=\boldsymbol{b}$$ will have no solution. So to find the best possible solution, we project vector $$\boldsymbol{b}$$ onto a vector $$\boldsymbol{p}$$. The vector $$\boldsymbol{p}$$ lies on the column space of $$A$$. We then solve for $$A\boldsymbol{\hat{x}}=\boldsymbol{p}$$ where $$\boldsymbol{\hat{x}}$$ is the best possible solution for $$A\boldsymbol{x}=\boldsymbol{b}$$.
 
-> ![Projection](/assets/img/projection.jpg)
-*Fig 2: Projection of vector b on vector a.*
+> ![Projection](/assets/img/projection.png)
+*Fig 2: Projection of vector $$\boldsymbol{b}$$ on vector $$\boldsymbol{a}$$.*
 
 If we have a vector $$\boldsymbol{b}$$ and the line determined by a vector $$\boldsymbol{a}$$, we do the projection of $$\boldsymbol{b}$$ on line $$\boldsymbol{a}$$ to find the vector $$\boldsymbol{p}$$.
 
@@ -351,7 +351,7 @@ The projection matrix $$P$$ is a [symmetric matrix](#symmetric-matrices) which m
 
 Here we will see what the projection matrix will be like in a higher dimensional space like $$R^3$$.
 
-Suppose in $$R^3$$, we want to project a vector $$\boldsymbol{b}$$ onto a closed point $$p$$ on a plane. If $$\boldsymbol{a_1}$$ and $$\boldsymbol{a_2}$$ form the basis for the plane, then the plane is the columnspace of the matrix $$\begin{bmatrix}a_1 & a_2\end{bmatrix}$$. For the projection vector of $$\boldsymbol{b}$$, $$\boldsymbol{p}$$ must be a linear combination of $$\boldsymbol{a_1}$$ and $$\boldsymbol{a_2}$$ for it to lie on the plane. Therefore we can write
+Suppose in $$R^3$$, we want to project a vector $$\boldsymbol{b}$$ onto a vector $$\boldsymbol{p}$$ that lies on a plane. If $$\boldsymbol{a_1}$$ and $$\boldsymbol{a_2}$$ form the basis for the plane, then the plane is the columnspace of the matrix $$\begin{bmatrix}a_1 & a_2\end{bmatrix}$$. For the projection vector of $$\boldsymbol{b}$$, $$\boldsymbol{p}$$ must be a linear combination of $$\boldsymbol{a_1}$$ and $$\boldsymbol{a_2}$$ for it to lie on the plane. Therefore we can write
 
 $$\hat{x_1}\boldsymbol{a_1}+\hat{x_2}\boldsymbol{a_2}=\boldsymbol{p}$$
 
