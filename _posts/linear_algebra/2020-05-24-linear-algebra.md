@@ -309,7 +309,7 @@ Two subspaces $$S$$ and $$T$$ are said to be orthogonal to each other if all the
 
 The equation $$A\boldsymbol{x}=\boldsymbol{b}$$ will have a solution only when $$\boldsymbol{b}$$ lies on the column space of $$A$$. However sometimes, due to measurement error, $$\boldsymbol{b}$$ might not lie on the column space of $$A$$ and therefore $$A\boldsymbol{x}=\boldsymbol{b}$$ will have no solution. So to find the best possible solution, we project vector $$\boldsymbol{b}$$ onto a vector $$\boldsymbol{p}$$. The vector $$\boldsymbol{p}$$ lies on the column space of $$A$$. We then solve for $$A\boldsymbol{\hat{x}}=\boldsymbol{p}$$ where $$\boldsymbol{\hat{x}}$$ is the best possible solution for $$A\boldsymbol{x}=\boldsymbol{b}$$.
 
-> ![Projection](/assets/img/projection.png)
+> ![Projection](/assets/img/projection.jpg)
 *Fig 2: Projection of vector $$\boldsymbol{b}$$ on vector $$\boldsymbol{a}$$.*
 
 If we have a vector $$\boldsymbol{b}$$ and the line determined by a vector $$\boldsymbol{a}$$, we do the projection of $$\boldsymbol{b}$$ on line $$\boldsymbol{a}$$ to find the vector $$\boldsymbol{p}$$.
@@ -416,11 +416,15 @@ This is not an orthogonal matrix. We can adjust the matrix to make it an orthogo
 
 We get the orthogonal matrix as $$Q=\dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\1 & -1\end{bmatrix}$$.
 
-We convert the orthogonal matrix $$A$$ to $$Q$$ because the matrix that projects onto the columnspace of $$Q$$ is
+In the example [Projection matrix in high dimensional spaces](#projection-matrix-in-high-dimensional-spaces), we are projecting a vector $$\boldsymbol{b}$$ on to a plane whose basis vectors are the columns of the matrix $$A$$. We convert the matrix $$A$$ to the orthogonal matrix $$Q$$ so that our projection matrix becomes
+
 $$P=Q(Q^TQ)^{-1}Q^T$$
+
 We know $$Q^TQ=I$$. Therefore $$P=QQ^T$$. If $$Q$$ is square then $$P=I$$ because the columns of $$Q$$ span the entire space.
 
-If the columns of $$Q$$ are orthonormal then $$\hat{x}=Q^Tb$$.
+If the columns of $$Q$$ are orthonormal then $$\boldsymbol{\hat{x}}=Q^Tb$$.
+
+To make a matrix orthonormal, we use the [Gram-Schmidt](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/least-squares-determinants-and-eigenvalues/orthogonal-matrices-and-gram-schmidt/MIT18_06SCF11_Ses2.4sum.pdf) method.
 
 # Determinant of a matrix
 
@@ -564,35 +568,3 @@ $$AA^T=U\Sigma V^T V \Sigma ^T U^T \implies AA^T=U\Sigma ^2 U^T$$
 This implies that the columns of $$U$$ contains the eigen vectors of $$AA^T$$ and $$\Sigma = \sqrt{\text{eigen values of }AA^T}$$.
 
 Now that we know $$U$$, $$V$$ and $$\Sigma$$, we can easily write $$A$$ as $$A=U\Sigma V^T$$.
-
-<br/>
-
----
-
-<br/>
-
-# Appendix: Definitions and Proofs
-
-
-## How to make a matrix orthonormal?
-
-We start with two independent vectors $$\boldsymbol{a}$$ and $$\boldsymbol{b}$$ and want to find the orthonormal vectors $$\boldsymbol{q_1}$$ and $$\boldsymbol{q_2}$$.
-![Orthogonal](/assets/img/orthogonal.jpg)
-
-First we get two vectors $$\boldsymbol{A}$$ and $$\boldsymbol{B}$$ such that they are orthogonal to each other.
-
-Let $$\boldsymbol{A}=\boldsymbol{a}$$. For $$\boldsymbol{B}$$ to be orthogonal to $$\boldsymbol{A}$$ it needs to be in the space spanned by $$\boldsymbol{a}$$ and $$\boldsymbol{b}$$ by projecting $$\boldsymbol{b}$$ onto $$\boldsymbol{a}$$ and letting $$\boldsymbol{B} = \boldsymbol{b} − \boldsymbol{p}$$. ($$\boldsymbol{B}$$ is what we previously called $$\boldsymbol{e}$$). Therefore we can write
-
-$$\boldsymbol{B}=\boldsymbol{b}-\dfrac{\boldsymbol{A}^T\boldsymbol{b}}{\boldsymbol{A}^T\boldsymbol{A}}\boldsymbol{A}$$
-
-Now the orthonormal vectors $$\boldsymbol{q_1}=\dfrac{\boldsymbol{A}}{\\|\boldsymbol{A}\\|}$$ and $$\boldsymbol{q_2}=\dfrac{\boldsymbol{B}}{\\|\boldsymbol{B}\\|}$$.
-
-If we started with three vectors $$\boldsymbol{a}$$, $$\boldsymbol{b}$$ and $$\boldsymbol{c}$$, then we’d find a vector $$\boldsymbol{C}$$ orthogonal to both $$\boldsymbol{A}$$ and $$\boldsymbol{B}$$ by subtracting from $$\boldsymbol{c}$$ its components in the $$\boldsymbol{A}$$ and $$\boldsymbol{B}$$ directions. Therefore
-
-$$\boldsymbol{C}=\boldsymbol{c}-\dfrac{\boldsymbol{A}^T\boldsymbol{c}}{\boldsymbol{A}^T\boldsymbol{A}}\boldsymbol{A}-\dfrac{\boldsymbol{B}^T\boldsymbol{c}}{\boldsymbol{B}^T\boldsymbol{B}}\boldsymbol{B} \qquad \text{ and}\qquad \boldsymbol{q_3}=\dfrac{\boldsymbol{C}}{\\|\boldsymbol{C}\\|}$$
-
-For the vectors $$\boldsymbol{a}$$, $$\boldsymbol{b}$$ and $$\boldsymbol{c}$$ we get the orthonormal matrix
-
-$$ Q=\begin{bmatrix} \boldsymbol{q_1} & \boldsymbol{q_2} & \boldsymbol{q_3} \end{bmatrix}$$
-
-The columnspace of $$Q$$ is the plane spanned by the vectors $$\boldsymbol{a}$$, $$\boldsymbol{b}$$ and $$\boldsymbol{c}$$.
