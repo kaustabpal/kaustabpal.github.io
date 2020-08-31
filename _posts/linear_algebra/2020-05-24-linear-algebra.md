@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linear Algebra"
+title: "Linear Algebra Cheat Sheet"
 tags: maths 
 permalink: "linear_algebra"
 excerpt: "An overview of the concepts of Linear Algebra."
@@ -436,7 +436,7 @@ The determinant of a singular matrix is always $$0$$.
 
 # Eigen values and eigen vectors
 
-A matrix $$A$$ acts like a function. It takes in a vector $$\boldsymbol{x}$$ as input and gives out a vector $$A\boldsymbol{x}$$ as output. If $$A\boldsymbol{x}$$ is a multiple of the vector $$\boldsymbol{x}$$, i.e. $$A\boldsymbol{x}=\lambda\boldsymbol{x}$$, then $$\boldsymbol{x}$$ is called an eigen vector of $$A$$ and $$\lambda$$ is called an eigen value. Eigen vectors are the vectors for which $$A\boldsymbol{x}$$ is a scaled version of $$\boldsymbol{x}$$. For an $$n \times n$$ matrix, there will be $$n$$ eigen values.
+A matrix $$A$$ acts like a function. It takes in a vector $$\boldsymbol{x}$$ as input and gives out a vector $$A\boldsymbol{x}$$ as output. For all the vectors $$\boldsymbol{x}$$, if $$A\boldsymbol{x}$$ is a multiple of $$\boldsymbol{x}$$, i.e. $$A\boldsymbol{x}=\lambda\boldsymbol{x}$$, then $$\boldsymbol{x}$$ is called an eigen vector of $$A$$ and $$\lambda$$ is called an eigen value. Eigen vectors are the vectors for which $$A\boldsymbol{x}$$ is a scaled version of $$\boldsymbol{x}$$. For an $$n \times n$$ matrix, there will be $$n$$ eigen values.
 
 If the eigen value of a matrix $$A$$ is $$0$$, then the eigen vectors of the matrix makeup the null space of the matrix, i.e. $$A\boldsymbol{x}=0\boldsymbol{x}=0 \implies A\boldsymbol{x}=0$$.
 
@@ -468,18 +468,20 @@ For anti-symmetric matrices i.e. $$A^T=-A$$, all eigen values are either zero or
 
 ## Diagonalizing a matrix
 
-If $$A$$ has $$n$$ linearly independent eigen vectors, then we can put those eigen vectors in the columns of a matrix $$S$$. Thus we get
+If $$A$$ has $$n$$ linearly independent eigen vectors $$\boldsymbol{x_1}, \boldsymbol{x_2}, \dots, \boldsymbol{x_n}$$, then we can put those eigen vectors in the columns of a matrix $$S$$ as:
 
-$$AS=A\begin{bmatrix}x_1 & x_2 & \dots & x_n\end{bmatrix}$$
+$$AS=A\begin{bmatrix}\boldsymbol{x_1} & \boldsymbol{x_2} & \dots & \boldsymbol{x_n}\end{bmatrix}$$
 
-$$\implies AS= \begin{bmatrix}\lambda_1x_1 & \lambda_2x_2 & \dots & \lambda_nx_n\end{bmatrix}$$
+$$\implies AS= \begin{bmatrix}\lambda_1\boldsymbol{x_1} & \lambda_2\boldsymbol{x_2} & \dots & \lambda_n\boldsymbol{x_n}\end{bmatrix}$$
 
 $$\implies AS= S\begin{bmatrix}
 \lambda_1 & 0 & \dots & 0\\
 0 & \lambda_2 & & 0 \\
 \vdots & & \ddots & \vdots \\
 0 & \dots & 0 & \lambda_n
-\end{bmatrix} = S\Lambda$$
+\end{bmatrix}$$
+
+$$\implies AS = S\Lambda$$
 
 Now, since the columns of $$S$$ are independent, we know that $$S^{-1}$$ exists. Therefore we can multiply both sides of $$AS=S\Lambda$$ by $$S^{-1}$$ and thus get
 
@@ -501,11 +503,13 @@ Similarly $$A^k= S^{-1}=S\Lambda^k S^{-1}$$. Thus we can easily find $$A^k$$.
 
 # Symmetric matrices
 
-Symmetric matrices are one of the most special matrices in linear algebra. For a matrix $$A$$, if $$A=A^T$$ then $$A$$ is called a symmetric matrix. Symmetric matrices have some properties which makes them so special. The important properties of symmetric matrices are:
+Symmetric matrices are one of the most special matrices in linear algebra. A matrix $$A$$ is called symmetric if $$A=A^T$$. 
+
+Symmetric matrices have some properties which makes them so special. The important properties of symmetric matrices are:
 
 1. The eigen values of real symmetric matrices are always real.
 
-2. If the real symmetric matrix has distinct eigen values then it's eigen vectors are always orthonormal.
+2. If the real symmetric matrix has distinct eigen values then it's eigen vectors can be chosen to be orthonormal.
 
 3. Real symmetric matrices are always diagonalizable.
 
@@ -513,7 +517,7 @@ Symmetric matrices are one of the most special matrices in linear algebra. For a
 
 # Positive definite marices
 
-Positive definite matrices are another type of special matrices in linear algebra. A matrix $$A$$ is said to be positive definite if $$x^TAx>0$$ for every non-zero vector $$x$$. Positive definite matrices have some special properties:
+Positive definite matrices are a type of symmetric matrices. A matrix $$A$$ is said to be positive definite if $$x^TAx>0$$ for every non-zero vector $$x$$. Positive definite matrices have some special properties:
 
 1. All eigen values in a positive definite matrix are positive.
 
@@ -547,7 +551,11 @@ If two matrices have the same distinct eigen values then they are similar. Howev
 
 # Singular value decomposition
 
-Singular value decomposition is the factorization of any $$m \times n$$ real or complex matrix. It is often referred to as the best factorization of a matrix. If $$M$$ is an $$m\times n$$ matrix, then it's singular decomposition form can be written as $$M=U\Sigma V^T$$. Here $$U$$ is an orthogonal matrix, $$\Sigma$$ is a diagonal matrix and $$V$$ is an orthogonal matrix. The SVD is extremely useful in signal processing, least squares fitting of data, process control, etc.
+Singular value decomposition is the factorization of any $$m \times n$$ real or complex matrix. It is often referred to as the best factorization of a matrix. 
+
+If $$M$$ is an $$m\times n$$ matrix, then it's singular decomposition form can be written as $$M=U\Sigma V^T$$. Here $$U$$ is an orthogonal matrix, $$\Sigma$$ is a diagonal matrix and $$V$$ is an orthogonal matrix. 
+
+The SVD is extremely useful in signal processing, least squares fitting of data, process control, etc.
 
 In Singular value decomposition, the goal is to find the orthonormal basis vectors($$V$$) in the row space of $$A$$ in such a way that if $$A$$ acts as a linear transformation matrix, it would transform $$V$$ to some multiples of the orthonormal basis vectors($$U$$) in the column space of $$A$$. In the matrix form, we can write this as $$AV=U\Sigma$$ such that the columns of the $$V$$ matrix contains the orthonormal basis vectors in the row space of $$A$$, the columns of the $$U$$ matrix contains the orthonormal basis vectors in the column space of $$A$$ and $$\Sigma$$ is a diagonal matrix that contains the multiplier elements to the vectors in $$U$$.
 
