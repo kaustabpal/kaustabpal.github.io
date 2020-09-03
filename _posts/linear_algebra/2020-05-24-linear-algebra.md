@@ -436,7 +436,7 @@ The determinant of a singular matrix is always $$0$$.
 
 # Eigen values and eigen vectors
 
-A matrix $$A$$ acts like a function. It takes in a vector $$\boldsymbol{x}$$ as input and gives out a vector $$A\boldsymbol{x}$$ as output. For all the vectors $$\boldsymbol{x}$$, if $$A\boldsymbol{x}$$ is a multiple of $$\boldsymbol{x}$$, i.e. $$A\boldsymbol{x}=\lambda\boldsymbol{x}$$, then $$\boldsymbol{x}$$ is called an eigen vector of $$A$$ and $$\lambda$$ is called an eigen value. Eigen vectors are the vectors for which $$A\boldsymbol{x}$$ is a scaled version of $$\boldsymbol{x}$$. For an $$n \times n$$ matrix, there will be $$n$$ eigen values.
+A matrix $$A$$ acts like a function. It takes in a vector $$\boldsymbol{x}$$ as input and gives out a vector $$A\boldsymbol{x}$$ as output. For all the vectors $$\boldsymbol{x}$$, if $$A\boldsymbol{x}$$ is a multiple of $$\boldsymbol{x}$$, i.e. $$A\boldsymbol{x}=\lambda\boldsymbol{x}$$, then $$\boldsymbol{x}$$ is called an eigen vector of $$A$$ and $$\lambda$$ is called an eigen value. Eigen vectors are the vectors for which $$A\boldsymbol{x}$$ is a scaled version of $$\boldsymbol{x}$$. For an $$n \times n$$ matrix, there will be $$n$$ eigen values. If the eigen values are all different, then each eigen values will give us a line of eigen vectors. If an eigen value is repeated, then we will get an entire plane of eigen vectors.
 
 If the eigen value of a matrix $$A$$ is $$0$$, then the eigen vectors of the matrix makeup the null space of the matrix, i.e. $$A\boldsymbol{x}=0\boldsymbol{x}=0 \implies A\boldsymbol{x}=0$$.
 
@@ -499,7 +499,7 @@ Now we can write $$A$$ as $$A=S\Lambda S^{-1}$$. Therefore
 
 $$A^2=S\Lambda S^{-1}S\Lambda S^{-1}=S\Lambda^2 S^{-1}$$
 
-Similarly $$A^k= S^{-1}=S\Lambda^k S^{-1}$$. Thus we can easily find $$A^k$$.
+Similarly $$A^k= S\Lambda^k S^{-1}$$. Thus we can easily find $$A^k$$.
 
 # Symmetric matrices
 
@@ -511,35 +511,33 @@ Symmetric matrices have some properties which makes them so special. The importa
 
 2. If the real symmetric matrix has distinct eigen values then it's eigen vectors can be chosen to be orthonormal.
 
-3. Real symmetric matrices are always diagonalizable.
+3. Since the eigen vectors of a symmetric matrix $$A$$ can be chosen to be orthonormal, we can factorize $$A$$ as
+    
+    $$A= S\Lambda S^{-1}\\ \\ \implies A= Q\Lambda Q^{T}$$
 
 4. For a symmetric matrix, the eigen values have the same sign as the pivots of the matrix.
 
 # Positive definite marices
 
-Positive definite matrices are a type of symmetric matrices. A matrix $$A$$ is said to be positive definite if $$x^TAx>0$$ for every non-zero vector $$x$$. Positive definite matrices have some special properties:
+Positive definite matrices are a type of symmetric matrices. A matrix $$A$$ is said to be positive definite if, the quadratic form associated with the matrix $$A$$ is greater than $$0$$, i.e. $$x^TAx>0$$, for every non-zero vector $$x$$.
 
-1. All eigen values in a positive definite matrix are positive.
+**Tests for positive definite matrices:**
 
-2. The pivots of the matrix are positive.
+1. Eigen values of the matrix are always greater than $$0$$.
 
-3. All sub-determinants are positive.
+2.  All sub-determinants of the matrix are always greater than $$0$$.
 
-4. If $$A$$ is a positive definite matrix, then $$A^{-1}$$ is also positive definite.
+3. $$x^TAx>0$$ for every non-zero vector $$x$$
 
-5. If $$A$$ and $$B$$ are positive definite matrices, then $$A+B$$ is also positive definite matrix.
+**Positive definite matrices have some special properties:**
 
-6. If $$A$$ is a rectangular $$m\times n$$ matrix, then $$A^TA$$ is a square, symmetric and positive definite matrix.
+1. If $$A$$ is a positive definite matrix, then $$A^{-1}$$ is also positive definite.
 
-A quadratic real function $$f(x)$$ on $$n$$ real variables can be written as $$x^TAx$$. If
+2. If $$A$$ and $$B$$ are positive definite matrices, then $$A+B$$ is also positive definite matrix.
 
-$$x=\begin{bmatrix}
-x_1 \\
-x_2
-\end{bmatrix}$$ and $$A=\begin{bmatrix}a & b \\
-b & c \end{bmatrix}$$, then $$x^TAx=ax_1^2+2bx_1x_2+cx_2^2$$. 
+3. If $$A$$ is a rectangular $$m\times n$$ matrix, then $$A^TA$$ is a square, symmetric and positive definite matrix.
 
-The matrix $$A$$ being positive definite means that the function $$f(x)$$ has a unique minimum at $$x=0$$ and is strictly positive for all other $$x's$$.
+4. The quadratic form associated with the matrix $$A$$, i.e. $$x^TAx$$ has a unique minimum at $$x=0$$ and is strictly positive for all other $$x's$$.
 
 # Similar Matrices
 
