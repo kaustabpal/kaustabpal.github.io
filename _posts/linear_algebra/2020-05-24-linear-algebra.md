@@ -513,7 +513,7 @@ Symmetric matrices have some properties which makes them so special. The importa
 
 1. The eigen values of real symmetric matrices are always real.
 
-2. If the real symmetric matrix has distinct eigen values then it's eigen vectors can be chosen to be orthonormal.
+2. The eigen vectors of a symmetric matrix can be chosen to be orthonormal.
 
 3. Since the eigen vectors of a symmetric matrix $$A$$ can be chosen to be orthonormal, we can factorize $$A$$ as
     
