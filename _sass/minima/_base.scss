@@ -31,7 +31,27 @@ body {
   margin: 0;
 }
 
+#markdown-toc::before {
+  content: "Contents";
+  font-weight: bold;
+  font-size: 1.1em;
 
+}
+
+.table-of-content {
+  
+  li {
+    font-size: 96%;
+    list-style-type: decimal-leading-zero;
+    
+  }
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  list-style: decimal;
+  display: inline-block;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

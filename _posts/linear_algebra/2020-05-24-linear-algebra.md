@@ -6,6 +6,7 @@ permalink: "linear_algebra"
 excerpt: "An overview of the concepts of Linear Algebra."
 
 ---
+
 {: class="table-of-content"}
 * TOC
 {:toc}
@@ -44,8 +45,11 @@ Some other properties of matrices are:
 
 - Distributivity: 
 
-$$(A+B)C = AC+BC \\
-or \\ A(C+D) = AC + AD$$
+$$(A+B)C = AC+BC$$
+
+$$or$$
+
+$$A(C+D) = AC + AD$$
 
 - Multiplication with identity matrices will give us the matrix itself.
 
