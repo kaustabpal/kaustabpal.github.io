@@ -75,10 +75,10 @@ As the airplane moves, $$^{P}\boldsymbol{p}$$ remains the same, but $$^{E}\bolds
 
 # Rotating a coordinate frame
 
-Let's start by looking at the airplane's coordinate system $$\{P\}$$, which is at an angle $$0\degree$$ with respect to the earth's coordinate system $$\{E\}$$.
+Let's start by looking at the airplane's coordinate system $$\{P\}$$, which is at an angle $$0^{\circ}$$ with respect to the earth's coordinate system $$\{E\}$$.
 
-> ![](assets/img/mr/File_001.png)
-*Fig 1: Airplane coordinate system $$\{P\}$$ at an angle $$0\degree$$ with respect to the Earth coordinate system $$\{E\}$$.*
+![](assets/img/mr/File_001.png)
+*Fig 1: Airplane coordinate system* $$\{P\}$$ *at an angle $$0^{\circ}$$ with respect to the Earth coordinate system* $$\{E\}$$.
 
 For the airplane's coordinate system, $$^{P}\boldsymbol{x}$$ is the unit basis vector which represents the x-axis and $$^{P}\boldsymbol{y}$$ is the unit basis vector which represents the y-axis. 
 
@@ -142,7 +142,7 @@ Putting these values in $$^{E}\boldsymbol{y}_{P}$$ we get
 
 $$^{E}\boldsymbol{y}_{P}=\begin{bmatrix}1 \times 1 \times \cos (90+0) \\ 1 \times 1 \times \cos 0\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}$$
 
-We represent the coordinate system $$\{P\}$$ rotated by an angle $$0\degree$$ with respect to coordinate system $$\{E\}$$ in the form of a matrix as:
+We represent the coordinate system $$\{P\}$$ rotated by an angle $$0^{\circ}$$ with respect to coordinate system $$\{E\}$$ in the form of a matrix as:
 
 $$^{E}R_{P} = \begin{bmatrix}1 & 0 \\ 0 & 1 \end{bmatrix}$$
 
@@ -164,7 +164,7 @@ $$ \implies ^{E}\boldsymbol{v}_{P}= x \times ^{E}\boldsymbol{x}_{P} + y \times ^
 
 What happens here is we scale the standard basis vectors of our rotated coordinate frame $$\{P\}$$ with the $$x$$ and $$y$$ values of the vector inside that coordinate frame $$\{P\}$$. Adding these will give us the vector $$^{E}\boldsymbol{v}_{P}$$ which is $$^{P}\boldsymbol{v}$$ rotated by angle $$\theta$$ with respect to $$\{E\}$$. This also means that the new rotated vector is just the linear combination of the standard basis vectors of our rotated coordinate system $$\{P\}$$ which means **we cannot rotate a vector without rotating it's coordinate system with respect to our reference coordinate system.** In our example our reference coordinate system is the earth coordinate system $$\{E\}$$. 
 
-In our example, we rotate our coordinate system $$\{P\}$$ by an angle $$0 \degree$$ with respect to $$\{E\}$$. The same technique applies for rotating $$\{P\}$$ by any angle $$\theta$$. To make things easier, we can simply formulate a generalized rotation matrix as 
+In our example, we rotate our coordinate system $$\{P\}$$ by an angle $$0 ^{\circ}$$ with respect to $$\{E\}$$. The same technique applies for rotating $$\{P\}$$ by any angle $$\theta$$. To make things easier, we can simply formulate a generalized rotation matrix as 
 
 $$^{E}R_{P} = \begin{bmatrix}\rVert ^{P}\boldsymbol{x}\rVert \rVert ^{E}\boldsymbol{x}\rVert \cos \theta & \rVert ^{P}\boldsymbol{y}\rVert \rVert ^{E}\boldsymbol{x}\rVert \cos (90+\theta) \\ \rVert ^{P}\boldsymbol{x}\rVert \rVert ^{E}\boldsymbol{y}\rVert \cos (90 - \theta) & \rVert ^{P}\boldsymbol{y}\rVert \rVert ^{E}\boldsymbol{y}\rVert \cos \theta \end{bmatrix}$$
 
@@ -184,18 +184,18 @@ Using the rotation matrix $$^{E}R_{P}$$ we can rotate any vector's coordinate sy
 
 In our airplane example, our reference coordinate system is the earth $$\{E\}$$. If we want to rotate our airplane by an angle of $$\theta$$ with respect to Earth $$\{E\}$$, we need to rotate our airplane's coordinate system $$\{P\}$$ by an angle of $$\theta$$ with respect to our Earth's coordinate system $$\{E\}$$.
 
-Let $$\theta$$ be equal to $$30 \degree$$.
+Let $$\theta$$ be equal to $$30 ^{\circ}$$.
 
 Then our rotation matrix $$^{E}R_{P}$$ becomes
 
-$$^{E}R_{P} = \begin{bmatrix}\cos 30 \degree & - \sin 30 \degree \\ \sin 30 \degree & \cos 30 \degree \end{bmatrix}$$
+$$^{E}R_{P} = \begin{bmatrix}\cos 30 ^{\circ} & - \sin 30 ^{\circ} \\ \sin 30 ^{\circ} & \cos 30 ^{\circ} \end{bmatrix}$$
 
 $$\implies ^{E}R_{P} = \begin{bmatrix}0.86 & - 0.5 \\ 0.5 & 0.86 \end{bmatrix}$$
 
-If we plot the column vectors of this rotation matrix, we will see that the coordinate system of the airplane $$\{P\}$$ is rotated by $$30\degree$$ with respect to the Earth's coordinate system $$\{E\}$$. Any vector that lies in $$\{P\}$$ will also be rotated by $$30 \degree$$ with respect to $$\{E\}$$. To represent any vector in $$\{P\}$$ with respect to $$\{E\}$$, we simply multiply that vector with our rotation matrix $$^{E}R_{P}$$ to get the vector with respect to our earth coordinate system $$\{E\}$$.
+If we plot the column vectors of this rotation matrix, we will see that the coordinate system of the airplane $$\{P\}$$ is rotated by $$30^{\circ}$$ with respect to the Earth's coordinate system $$\{E\}$$. Any vector that lies in $$\{P\}$$ will also be rotated by $$30 ^{\circ}$$ with respect to $$\{E\}$$. To represent any vector in $$\{P\}$$ with respect to $$\{E\}$$, we simply multiply that vector with our rotation matrix $$^{E}R_{P}$$ to get the vector with respect to our earth coordinate system $$\{E\}$$.
 
 > ![](assets/img/mr/File_002.png)
-*Fig 2: Airplane coordinate system $$\{P\}$$ at an angle $$30\degree$$ with respect to the Earth coordinate system $$\{E\}$$.*
+*Fig 2: Airplane coordinate system* $$\{P\}$$ *at an angle* $$30^{\circ}$$ *with respect to the Earth coordinate system* $$\{E\}$$.
 
 
 # References

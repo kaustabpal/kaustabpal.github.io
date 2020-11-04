@@ -27,7 +27,7 @@ url: "kaustabpal.github.io/" # the base hostname & protocol for your site, e.g. 
 show_excerpts: true
 twitter_username: kaustabpal
 github_username:  kaustabpal
-linkedin_username: kaustabpal
+
 
 # Build settings
 theme: minima

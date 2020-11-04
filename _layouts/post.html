@@ -28,28 +28,29 @@ layout: default
  
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+    <aside></aside><div class="bug_reporting">
+      <h4>Find an error or bug?</h4>
+      <p>Everything on this site is available on GitHub. Head to <a href='https://github.com/kaustabpal/kaustabpal.github.io/issues/new'>and submit a suggested change</a>. Include the URL in the issue.</p>
+  </div></aside>
     
   </div>
 <div>
 <hr/>
 <br/>
-  <div class="row">
+<div class="post-nav">
+  <div>
     {% if page.previous.url %}
-    <div class="column">
-        <p><a class="prev" href="{{page.previous.url | relative_url}}">&larr; {{page.previous.title}}</a></p>
-    </div>
+    <a href="{{page.previous.url}}">&laquo;&nbsp;{{page.previous.title}}</a>
     {% endif %}
-
+  </div>
+  <div class="post-nav-next">
     {% if page.next.url %}
-    <div class="column">
-        <p><a class="next" href="{{page.next.url | relative_url}}">{{page.next.title}} &rarr;</a></p>
-    </div>
+    <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&raquo;</a>
     {% endif %}
-  </div></div>
+  </div>
+</div></div>
+    
 
-  {% if page.comments %}
-    {% include disqus.html %}
-  {% endif %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

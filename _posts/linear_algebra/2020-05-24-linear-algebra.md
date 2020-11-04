@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linear Algebra Cheat Sheet"
+title: "Linear Algebra"
 tags: maths 
 permalink: "linear_algebra"
 excerpt: "An overview of the concepts of Linear Algebra."

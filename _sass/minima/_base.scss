@@ -189,7 +189,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #282828;
+  background-color: #eef;
 }
 
 code {
@@ -207,7 +207,26 @@ pre {
   }
 }
 
+/* ---------------------------------------------------------
+Bug reporting
+---------------------------------------------------------*/
 
+.bug_reporting{
+    padding: 1em;
+    border: solid 1px #e6e6e6;
+    margin-top: 3em;
+
+}
+
+.bug_reporting h4{
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.bug_reporting p{
+    margin: 0;
+    font-size: 16px;
+}
 
 /**
  * Wrapper
@@ -289,4 +308,22 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
+}
+/**
+ * PostNav
+ */
+.post-nav {
+  /* Insert your custom styling here. Example:
+
+     font-size: 14px;
+     margin-bottom: 1em;
+  */
+  display: flex;
+}
+.post-nav div {
+  /* flex-grow, flex-shrink, flex-basis */
+  flex: 1 1 0;
+}
+.post-nav-next {
+  text-align: right;
 }
