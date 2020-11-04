@@ -8,9 +8,13 @@ layout: default
   {%- endif -%}
 
   {{ content }}
+  <div class="page-heading" id="posts">Posts</div>
+  <hr><br>
+  <div class="homeblock">
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
+      {% if post.layout == 'post' %}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}
@@ -19,11 +23,34 @@ layout: default
           </a>
         </span>
         <p>{{post.excerpt}}</p>
-
-          
       </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+  <br>
+  <div class="page-heading" id="notes">Notes</div>
+  <hr><br>
+  <div class="homeblock">
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      {% if post.layout == 'notes' %}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </span>
+        <p>{{post.excerpt}}</p>
+      </li>
+      {%- endif -%}
       {%- endfor -%}
     </ul>
 
   {%- endif -%}
+</div>
+<br>
 </div>

@@ -77,8 +77,13 @@ As the airplane moves, $$^{P}\boldsymbol{p}$$ remains the same, but $$^{E}\bolds
 
 Let's start by looking at the airplane's coordinate system $$\{P\}$$, which is at an angle $$0^{\circ}$$ with respect to the earth's coordinate system $$\{E\}$$.
 
-![](assets/img/mr/File_001.png)
-*Fig 1: Airplane coordinate system* $$\{P\}$$ *at an angle $$0^{\circ}$$ with respect to the Earth coordinate system* $$\{E\}$$.
+<figure>
+<img src="assets/img/mr/File_001.png" style="width:70%;" />
+</figure>
+
+{:.caption}
+Fig 1: Airplane coordinate system $$\{P\}$$ at an angle $$0^{\circ}$$ with respect to the Earth coordinate system $$\{E\}$$
+
 
 For the airplane's coordinate system, $$^{P}\boldsymbol{x}$$ is the unit basis vector which represents the x-axis and $$^{P}\boldsymbol{y}$$ is the unit basis vector which represents the y-axis. 
 
@@ -193,9 +198,12 @@ $$^{E}R_{P} = \begin{bmatrix}\cos 30 ^{\circ} & - \sin 30 ^{\circ} \\ \sin 30 ^{
 $$\implies ^{E}R_{P} = \begin{bmatrix}0.86 & - 0.5 \\ 0.5 & 0.86 \end{bmatrix}$$
 
 If we plot the column vectors of this rotation matrix, we will see that the coordinate system of the airplane $$\{P\}$$ is rotated by $$30^{\circ}$$ with respect to the Earth's coordinate system $$\{E\}$$. Any vector that lies in $$\{P\}$$ will also be rotated by $$30 ^{\circ}$$ with respect to $$\{E\}$$. To represent any vector in $$\{P\}$$ with respect to $$\{E\}$$, we simply multiply that vector with our rotation matrix $$^{E}R_{P}$$ to get the vector with respect to our earth coordinate system $$\{E\}$$.
+<figure>
+<img src="assets/img/mr/File_002.png" style="width:70%;" />
+</figure>
 
-> ![](assets/img/mr/File_002.png)
-*Fig 2: Airplane coordinate system* $$\{P\}$$ *at an angle* $$30^{\circ}$$ *with respect to the Earth coordinate system* $$\{E\}$$.
+{:.caption}
+Fig 2: Airplane coordinate system $$\{P\}$$ at an angle $$30^{\circ}$$ with respect to the Earth coordinate system $$\{E\}$$.
 
 
 # References

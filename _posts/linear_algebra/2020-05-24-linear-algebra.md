@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: notes
 title: "Linear Algebra"
 tags: maths 
 permalink: "linear_algebra"
@@ -223,7 +223,8 @@ If we write the operations that we performed in the form of a transformation mat
 
 # Four fundamental subspaces
 
-> ![Four fundamental subspaces](assets/img/bigPic.png)
+![Four fundamental subspaces](assets/img/bigPic.png)
+
 *Fig 1: The four fundamental subspaces. (Image source: Sec 3.6 Strang, Gilbert. Introduction to Linear Algebra, 2009.)*
 
 ## Column Space
@@ -313,7 +314,8 @@ Two subspaces $$S$$ and $$T$$ are said to be orthogonal to each other if all the
 
 The equation $$A\boldsymbol{x}=\boldsymbol{b}$$ will have a solution only when $$\boldsymbol{b}$$ lies on the column space of $$A$$. However sometimes, due to measurement error, $$\boldsymbol{b}$$ might not lie on the column space of $$A$$ and therefore $$A\boldsymbol{x}=\boldsymbol{b}$$ will have no solution. So to find the best possible solution, we project vector $$\boldsymbol{b}$$ onto a vector $$\boldsymbol{p}$$. The vector $$\boldsymbol{p}$$ lies on the column space of $$A$$. We then solve for $$A\boldsymbol{\hat{x}}=\boldsymbol{p}$$ where $$\boldsymbol{\hat{x}}$$ is the best possible solution for $$A\boldsymbol{x}=\boldsymbol{b}$$.
 
-> ![Projection](/assets/img/projection.jpg)
+![Projection](/assets/img/projection.jpg)
+
 *Fig 2: Projection of vector $$\boldsymbol{b}$$ on vector $$\boldsymbol{a}$$.*
 
 If we have a vector $$\boldsymbol{b}$$ and the line determined by a vector $$\boldsymbol{a}$$, we do the projection of $$\boldsymbol{b}$$ on line $$\boldsymbol{a}$$ to find the vector $$\boldsymbol{p}$$.
