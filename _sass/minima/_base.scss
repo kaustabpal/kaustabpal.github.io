@@ -162,11 +162,12 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #1d1d1f;
-  background-color: #f5f5f5;
-  padding: 5px;
+  color: #777777;
+  border-left: 4px solid #bbbbbb;
+  padding: 10px;
   margin: 10px;
-  border: 1px solid #bbbbbb;
+  padding-left: 20px;
+  background: #f0f0f0;
   
   @include relative-font-size(1.125);
   

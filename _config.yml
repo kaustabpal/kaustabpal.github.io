@@ -21,7 +21,7 @@
 title: Kaustab Pal
 email: kaustab21@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Experimentation notes on various concepts.
+  M.S. by Research student in Robotics Research Center at IIIT Hyderabad.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "kaustabpal.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true

@@ -2,9 +2,9 @@
  * Site header
  */
 .site-header {
-  background: rgba(0,0,0,0.8);
-  border-top: 1px solid #1d1d1f;
-  border-bottom: 1px solid #1d1d1f;
+  background: #24292f;
+  border-top: 1px solid #24292f;
+  border-bottom: 1px solid #24292f;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -257,6 +257,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  text-align: justify;
 
   h1 {
     text-decoration: underline;
