@@ -14,13 +14,6 @@ layout: default
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}
       <span>
-        {% for tag in page.tags %}
-          {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a class="post-tag" href="/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
-        {% endfor %}
-      </span>
-      <span>
-        <hr>
       </span>
     </p>
       

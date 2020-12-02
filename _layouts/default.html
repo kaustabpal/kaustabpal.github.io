@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="en-us">
 
-	 
-
-  {%- include head.html -%}
+  {% include head.html %}
 
   <body>
-    {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-    <script src="/assets/vanilla-back-to-top.min.js"></script>
-    <script>addBackToTop({
-      diameter: 46,
-      backgroundColor: '#24292f',
-      textColor: '#fff'
-    })</script>
+    {% include sidebar.html %}
 
-    {%- include footer.html -%}
+    <div class="content container">
+      {{ content }}
+    </div>
 
   </body>
-
 </html>

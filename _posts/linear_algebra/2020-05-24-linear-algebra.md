@@ -1,5 +1,5 @@
 ---
-layout: notes
+layout: post
 title: "Linear Algebra"
 tags: maths 
 permalink: "linear_algebra"

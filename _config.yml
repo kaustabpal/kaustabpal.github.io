@@ -41,7 +41,7 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       permalink: "/:title"
-      comments: true
+      comments: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
