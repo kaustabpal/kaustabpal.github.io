@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rotation Matrices"
+title: "Rotation_Matrices.md"
 excerpt: "An explanation about how a vector's coordinate system is rotated with respect to a reference coordinate system."
 tags: maths
 ---

@@ -117,7 +117,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    
     background-color: rgba(219, 219, 219, 0.99);
     color: #000;
   }
@@ -266,7 +266,7 @@ Bug reporting
 
 .bug_reporting{
   padding: 1em;
-  border: solid 1px #e6e6e6;
+  border: solid 1px yellow;
   margin-top: 3em;
 
 }
