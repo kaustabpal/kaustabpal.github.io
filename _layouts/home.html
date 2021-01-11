@@ -8,27 +8,22 @@ layout: default
   {%- endif -%}
 
   {{ content }}
-  <h2 class="post-list-heading">Articles</h2>
-  
-  <br>
-  <div class="homeblock">
+
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
-      {% if post.layout == 'post' %}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%d %b, %Y" -%}
-        <span class="post-meta">
+        {%- assign date_format = site.minima.date_format | default: "[ %d-%m-%Y ]" -%}
+        <span class="post-meta">- {{ post.date | date: date_format }}
+        
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
-          </a>({{ post.date | date: date_format }})
+          </a>
         </span>
-        <p>{{post.excerpt}}</p>
+        
       </li>
-      {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}
-</div>
 
 </div>

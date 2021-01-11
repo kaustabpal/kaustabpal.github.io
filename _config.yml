@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you:
+# If you need help with YAML syntax, here are some quick references for you: 
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,22 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kaustab Pal
-email: kaustab21@gmail.com
+title: kaustab pal
+email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  M.S. by Research student in Robotics Research Center at IIIT Hyderabad.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "kaustabpal.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-show_excerpts: true
-twitter_username: kaustabpal
-github_username:  kaustabpal
-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-highlighter: rouge
 defaults:
   -
     scope:
@@ -42,7 +41,6 @@ defaults:
     values:
       permalink: "/:title"
       comments: false
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -62,5 +60,3 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-exclude:
-   - _drafts/README.md
