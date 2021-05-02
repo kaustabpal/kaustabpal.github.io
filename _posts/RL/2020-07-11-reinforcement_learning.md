@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Experiments_with_DQN.md"
+title: "Experiments with DQN"
 tags: reinforcement-learning
 permalink: "dqn"
 excerpt: "Observations on how DQN performs when hyperparameters related to it's target network are varied."
