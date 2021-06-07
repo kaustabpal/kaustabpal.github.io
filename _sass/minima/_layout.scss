@@ -3,8 +3,8 @@
  */
  
 .site-header {
-  border-top: 1px #fff;
-  border-bottom: 1px dashed #fff;
+  border-top: 1px $text-color;
+  border-bottom: 1px dashed $text-color;
   margin-bottom: 25px;
   
 
@@ -22,9 +22,8 @@
     color: $brand-color;
   }
   &:hover {
-    color: $text-color;
-    background-color: rgba(219, 219, 219, 0.99);
-    color: #000;
+    background-color: $background-color;
+    color: $brand-color;
   }
   
 }

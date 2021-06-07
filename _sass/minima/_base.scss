@@ -111,6 +111,7 @@ li {
 a {
   color: $brand-color;
   text-decoration: underline;
+  font-weight: 700;
 
   &:visited {
     color: $brand-color;
@@ -118,7 +119,7 @@ a {
 
   &:hover {
     
-    background-color: rgba(219, 219, 219, 0.99);
+    background-color: $brand-color;
     color: #000;
   }
 
@@ -266,7 +267,7 @@ Bug reporting
 
 .bug_reporting{
   padding: 1em;
-  border: solid 1px yellow;
+  border: solid 3px #7894a1;
   margin-top: 3em;
 
 }
