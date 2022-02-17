@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Homogeneous Coordinates | Kaustab Pal</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Homogeneous Coordinates" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learning notes on various topics." />
+<meta property="og:description" content="Learning notes on various topics." />
+<link rel="canonical" href="http://localhost:4000/homogeneous_coordinates" />
+<meta property="og:url" content="http://localhost:4000/homogeneous_coordinates" />
+<meta property="og:site_name" content="Kaustab Pal" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-29T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Homogeneous Coordinates" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-12-29T00:00:00+05:30","datePublished":"2021-12-29T00:00:00+05:30","description":"Learning notes on various topics.","headline":"Homogeneous Coordinates","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/homogeneous_coordinates"},"url":"http://localhost:4000/homogeneous_coordinates"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" href="favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Kaustab Pal" /><!-- scripts for fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <!-- scripts fo Mathjax  -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Kaustab Pal</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Homogeneous Coordinates</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-12-29T00:00:00+05:30" itemprop="datePublished">Dec 29, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="table-of-content" id="markdown-toc">
+  <li><a href="#definition" id="markdown-toc-definition">Definition</a></li>
+  <li><a href="#explanation" id="markdown-toc-explanation">Explanation</a></li>
+  <li><a href="#advantages" id="markdown-toc-advantages">Advantages</a></li>
+  <li><a href="#lines-in-images-2d" id="markdown-toc-lines-in-images-2d">Lines in images (2d)</a>    <ul>
+      <li><a href="#how-to-find-intersection-of-two-lines" id="markdown-toc-how-to-find-intersection-of-two-lines">How to find intersection of two lines?</a></li>
+      <li><a href="#how-to-find-the-line-joining-two-points" id="markdown-toc-how-to-find-the-line-joining-two-points">How to find the line joining two points?</a></li>
+      <li><a href="#lines-passing-through-a-point-at-infinity" id="markdown-toc-lines-passing-through-a-point-at-infinity">Lines passing through a point at infinity</a></li>
+      <li><a href="#ideal-line" id="markdown-toc-ideal-line">Ideal line</a></li>
+    </ul>
+  </li>
+  <li><a href="#resources" id="markdown-toc-resources">Resources</a></li>
+</ul>
+
+<h2 id="definition">Definition</h2>
+
+<p>The representation of a point \(X\) of a geometric object is in the homogeneous coordinates if
+\(X\) and \(\lambda X\) represent the same object for \(\lambda \neq 0\).</p>
+
+<h2 id="explanation">Explanation</h2>
+
+<p>Homogeneous coordinate is a coordinate system used in projective geometry. Any point in the projective plane is represented by homogeneous coordinates. The euclidean plane is a subset of the projective plane and is at a distance of \(1\) from the origin of the projective plane. Then the origin of euclidean coordinate in the projective plane can be written in the homogeneous coordinate as \(\begin{bmatrix}0 &amp; 0 &amp; 1 \end{bmatrix}\). Any point \(\begin{bmatrix}x &amp; y\end{bmatrix}\) in the euclidean plane can be represented in the projective plane
+by simply adding a third coordinate \(1\) at the end. The point then becomes \(\begin{bmatrix}x &amp; y &amp; 1\end{bmatrix}\).</p>
+
+<p>If the homogeneous coordinates are multiplied by a scalar, they will still represent the same coordinates in the euclidean space.</p>
+
+<p>Example:</p>
+
+\[\begin{bmatrix}x \\ y \\ 1 \end{bmatrix} = w*\begin{bmatrix} x \\ y \\ 1 \end{bmatrix} = \begin{bmatrix}wx \\ wy \\ w\end{bmatrix} = \begin{bmatrix}u \\ v \\ w\end{bmatrix}\]
+
+<p>To get the euclidean coordinates from the 3d homogeneous coordinates we divide
+the homogeneous coordinates by \(w\) ie \(\begin{bmatrix}u/w &amp; v/w &amp; 1\end{bmatrix}\). Then the euclidean
+coordinates will become \(\begin{bmatrix}u/w &amp; v/w \end{bmatrix}\).</p>
+
+<h2 id="advantages">Advantages</h2>
+
+<p>An advantage of using homogeneous coordinates is that we can easily use multiple
+transformations by concatinating several matrix vector multiplications.</p>
+
+<p>In the euclidean space, given a point we can scale it and rotate it and
+translate it but we can’t do all these operations at the same time as scaling
+and rotation requires a matrix multiplication whereas translation requires a
+vector addition. To combine all these operations into a single matrix we
+transform the euclidean coordinate to homogeneous coordinate and now the
+translation operation also becomes a matrix multiplication as</p>
+
+\[\begin{bmatrix}
+1 &amp; 0 &amp; t_x \\
+0 &amp; 1 &amp; t_y \\
+0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} x \\ y \\ 1\end{bmatrix}\]
+
+<p>Thus we can now have one single transformation matrix by combining all the
+transformations together. We can save a lot of computational cost this way.</p>
+
+<p>It also allows us to represent points that are infinitely far away using finite
+numbers. For example to represent a point in infinity we have to write it as
+\(\begin{bmatrix}x &amp; y &amp; 0\end{bmatrix}\).</p>
+
+<h2 id="lines-in-images-2d">Lines in images (2d)</h2>
+
+<p>Given a point in 3d homogeneous coordinates, we can check if it lies on  a line
+in the 2d image. We can also find the 3d point of intersection of two lines in 
+an image. And given two 3d points, we can find the line in the image joining those points.</p>
+
+<p>A line is represented in the standard form as \(ax + by + c = 0\).</p>
+
+<p>We can write this in the vector form as \([a, b, c]^T [x, y, 1]\) Therefore if
+we know the coefficients of a line then we can multiply the \(u/w\) and \(v/w\) of a
+point in homogeneous coordinates and if we get 0 then that point in 3d lies on that
+line in that image.</p>
+
+<h3 id="how-to-find-intersection-of-two-lines">How to find intersection of two lines?</h3>
+
+<p>If we know the coefficients of two lines \(l\) and \(m\) and we want to find the
+point of intersection of the two lines, then that point \(X\) will be such that
+\(l^TX=0\) and \(m^TX=0\). Therefore we can write a matrix as 
+\(\begin{bmatrix} l1 &amp; l2 &amp; l3 \\ 
+m1 &amp; m2 &amp; m3 \end{bmatrix}\begin{bmatrix}x \\ y \\ 1 \end{bmatrix} = 0\)</p>
+
+<h3 id="how-to-find-the-line-joining-two-points">How to find the line joining two points?</h3>
+<p>We know \(X\) and \(Y\) of two points in the homogeneous coordinates. We have to
+find the \(L\). Then we can write this as \(\begin{bmatrix}x_1 &amp; x_2 &amp; 1\\
+y_1 &amp; y_2 &amp; 1\end{bmatrix} \begin{bmatrix}l_1\\ l_2 \\ l_3\end{bmatrix}= 
+\begin{bmatrix}0\\ 0\end{bmatrix}\)</p>
+
+<h3 id="lines-passing-through-a-point-at-infinity">Lines passing through a point at infinity</h3>
+
+<p>In homogeneous coordinates a point in infinity is represented as \([x, y , 0]\).
+If we want to find all the lines that pass through this point we need to do
+\(\begin{bmatrix} x &amp; y &amp; 0 \end{bmatrix} \begin{bmatrix}l1 \\ l2 \\
+l3\end{bmatrix} = \begin{bmatrix}0\\0\\0\end{bmatrix}\) Here we will get a fixed
+\(l1\) and \(l2\) but the \(l3\) can be anything thus proving that all the
+parallel lines meet at a point in infinity.</p>
+
+<h3 id="ideal-line">Ideal line</h3>
+
+<p>The ideal line represented as \([0, 0, 1]\) contains all the points at infinity.
+This line is also called the horizon. Thus any points at infinity \([x, y, 0]\)
+lies on this line as \(\begin{bmatrix}x &amp; y &amp; 0 \end{bmatrix}\begin{bmatrix}0\\
+0\\ 1\end{bmatrix} = \begin{bmatrix}0 \\ 0 \\ 0 \end{bmatrix}\)</p>
+
+<p>The same concepts can be represented in 3d as well where the homogeneous
+coordinates will be four dimensional. In \(3d\) we will have planes instead of a
+line and sky instead of horizon.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://wordsandbuttons.online/interactive_guide_to_homogeneous_coordinates.html">An interactive guide to homogeneous coordinates</a></li>
+  <li><a href="https://www.youtube.com/watch?v=MQdm0Z_gNcw&amp;t=572s">Homogeneous Coordinates (Cyrill Stachniss, 2020)</a></li>
+</ul>
+
+
+    <br>
+    <!-- Add backlinks to the current page --></div>
+
+  <script src="https://utteranc.es/client.js"
+        repo="kaustabpal/kaustabpal.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <a class="u-url" href="/homogeneous_coordinates" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            Email
+            </li><li><a class="u-email" href="mailto:kaustab21@gmail.com">kaustab21@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/kaustabpal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">kaustabpal</span></a></li><li><a href="https://www.twitter.com/kaustabpal"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">kaustabpal</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Learning notes on various topics.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

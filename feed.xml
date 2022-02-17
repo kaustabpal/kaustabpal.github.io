@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-18T02:11:00+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kaustab Pal</title><subtitle>Learning notes on various topics.</subtitle><entry><title type="html">Nvim</title><link href="http://localhost:4000/nvim" rel="alternate" type="text/html" title="Nvim" /><published>2022-02-17T00:00:00+05:30</published><updated>2022-02-17T00:00:00+05:30</updated><id>http://localhost:4000/nvim</id><content type="html" xml:base="http://localhost:4000/nvim"><![CDATA[<ul class="table-of-content" id="markdown-toc">
+  <li><a href="#working-with-multiple-files" id="markdown-toc-working-with-multiple-files">Working with multiple files</a></li>
+</ul>
+<h2 id="working-with-multiple-files">Working with multiple files</h2>
+<p>When we open nvim, what we see is a window in a tab. The window is the viewport
+that holds the buffers. When we open a file, we are actually copying the
+contents of the file onto a buffer and when we make changes to that copy and 
+write, the contents of the buffer is written in that file thus changing it. When
+we open multiple files each file will open in it’s own buffer. The window will
+display only the active buffer while the other buffers will be hidden. We can
+check the files in the buffers with the command <code class="language-plaintext highlighter-rouge">buffers</code>. We can switch to
+a buffer with the command <code class="language-plaintext highlighter-rouge">:b&lt;buffer number&gt;</code>. To close the active
+buffer we use the command <code class="language-plaintext highlighter-rouge">:bd</code>. To close a hidden buffer we use the command
+<code class="language-plaintext highlighter-rouge">:bd&lt;buffer number&gt;</code>.</p>
+
+<p>A tab can have multiple windows. Thus in a tab we can have multiple windows open
+through horizontal split <code class="language-plaintext highlighter-rouge">:hsplit</code> or <code class="language-plaintext highlighter-rouge">:split</code> or vertical split
+<code class="language-plaintext highlighter-rouge">:vsplit</code>.</p>]]></content><author><name></name></author><category term="" /><summary type="html"><![CDATA[Working with multiple files Working with multiple files When we open nvim, what we see is a window in a tab. The window is the viewport that holds the buffers. When we open a file, we are actually copying the contents of the file onto a buffer and when we make changes to that copy and write, the contents of the buffer is written in that file thus changing it. When we open multiple files each file will open in it’s own buffer. The window will display only the active buffer while the other buffers will be hidden. We can check the files in the buffers with the command buffers. We can switch to a buffer with the command :b&lt;buffer number&gt;. To close the active buffer we use the command :bd. To close a hidden buffer we use the command :bd&lt;buffer number&gt;.]]></summary></entry><entry><title type="html">Panoptic Segmentation</title><link href="http://localhost:4000/panoptic_segmentation" rel="alternate" type="text/html" title="Panoptic Segmentation" /><published>2022-02-14T00:00:00+05:30</published><updated>2022-02-14T00:00:00+05:30</updated><id>http://localhost:4000/panoptic_segmentation</id><content type="html" xml:base="http://localhost:4000/panoptic_segmentation"><![CDATA[<ul class="table-of-content" id="markdown-toc">
+  <li><a href="#explanation" id="markdown-toc-explanation">Explanation</a></li>
+  <li><a href="#literature-survey" id="markdown-toc-literature-survey">Literature survey</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h2 id="explanation">Explanation</h2>
+
+<p>Panoptic segmentation unifies Instance segmentation and Semantic segmentation.
+Here each pixel in the image is given a semantic label and an instance id.</p>
+
+<p>Let there be a predetermined set of semantic labels \(L = \{ 0, 1, \dots ,
+L-1\}\). \(L\) is a union of the set of labels belonging to <strong>things</strong> like cars,
+cycle, pedestrians etc and the set of labels belonging to <strong>stuffs</strong> like sky, road,
+grass etc, i.e. \(L = L^{t} \cup L^{st}\). The task of panoptic segmentation requires
+the algorithm to map each pixel \(i\) in the image to a pair \((l_i, z_i) \in L
+\times \mathbb{N}\). Here \(l_i\) represents a label from set \(L\) whereas
+\(z_i\) represents the instance number of that label. If a pixel is labelled
+with \(l_i \in L^{st}\) then we don’t consider that pixel’s instance number
+\(z_i\). The pixels belonging to an object in the scene will have the same
+\((l_i, z_i)\) pair.</p>
+
+<h2 id="literature-survey">Literature survey</h2>
+
+<p><a class="citation" href="#Kirillov_2019_CVPR">[1]</a> from FAIR labs gives a good overview of
+the task along with it’s challenges, datasets available and a new metric.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="Kirillov_2019_CVPR">[1] A. Kirillov, K. He, R. Girshick, C. Rother, and P. Dollar, “Panoptic Segmentation,” Jun. 2019.</span></li></ol>]]></content><author><name></name></author><category term="notes" /><category term="vision" /></entry><entry><title type="html">Homogeneous Coordinates</title><link href="http://localhost:4000/homogeneous_coordinates" rel="alternate" type="text/html" title="Homogeneous Coordinates" /><published>2021-12-29T00:00:00+05:30</published><updated>2021-12-29T00:00:00+05:30</updated><id>http://localhost:4000/homogeneous-coordinates</id><content type="html" xml:base="http://localhost:4000/homogeneous_coordinates"><![CDATA[<ul class="table-of-content" id="markdown-toc">
+  <li><a href="#definition" id="markdown-toc-definition">Definition</a></li>
+  <li><a href="#explanation" id="markdown-toc-explanation">Explanation</a></li>
+  <li><a href="#advantages" id="markdown-toc-advantages">Advantages</a></li>
+  <li><a href="#lines-in-images-2d" id="markdown-toc-lines-in-images-2d">Lines in images (2d)</a>    <ul>
+      <li><a href="#how-to-find-intersection-of-two-lines" id="markdown-toc-how-to-find-intersection-of-two-lines">How to find intersection of two lines?</a></li>
+      <li><a href="#how-to-find-the-line-joining-two-points" id="markdown-toc-how-to-find-the-line-joining-two-points">How to find the line joining two points?</a></li>
+      <li><a href="#lines-passing-through-a-point-at-infinity" id="markdown-toc-lines-passing-through-a-point-at-infinity">Lines passing through a point at infinity</a></li>
+      <li><a href="#ideal-line" id="markdown-toc-ideal-line">Ideal line</a></li>
+    </ul>
+  </li>
+  <li><a href="#resources" id="markdown-toc-resources">Resources</a></li>
+</ul>
+
+<h2 id="definition">Definition</h2>
+
+<p>The representation of a point \(X\) of a geometric object is in the homogeneous coordinates if
+\(X\) and \(\lambda X\) represent the same object for \(\lambda \neq 0\).</p>
+
+<h2 id="explanation">Explanation</h2>
+
+<p>Homogeneous coordinate is a coordinate system used in projective geometry. Any point in the projective plane is represented by homogeneous coordinates. The euclidean plane is a subset of the projective plane and is at a distance of \(1\) from the origin of the projective plane. Then the origin of euclidean coordinate in the projective plane can be written in the homogeneous coordinate as \(\begin{bmatrix}0 &amp; 0 &amp; 1 \end{bmatrix}\). Any point \(\begin{bmatrix}x &amp; y\end{bmatrix}\) in the euclidean plane can be represented in the projective plane
+by simply adding a third coordinate \(1\) at the end. The point then becomes \(\begin{bmatrix}x &amp; y &amp; 1\end{bmatrix}\).</p>
+
+<p>If the homogeneous coordinates are multiplied by a scalar, they will still represent the same coordinates in the euclidean space.</p>
+
+<p>Example:</p>
+
+\[\begin{bmatrix}x \\ y \\ 1 \end{bmatrix} = w*\begin{bmatrix} x \\ y \\ 1 \end{bmatrix} = \begin{bmatrix}wx \\ wy \\ w\end{bmatrix} = \begin{bmatrix}u \\ v \\ w\end{bmatrix}\]
+
+<p>To get the euclidean coordinates from the 3d homogeneous coordinates we divide
+the homogeneous coordinates by \(w\) ie \(\begin{bmatrix}u/w &amp; v/w &amp; 1\end{bmatrix}\). Then the euclidean
+coordinates will become \(\begin{bmatrix}u/w &amp; v/w \end{bmatrix}\).</p>
+
+<h2 id="advantages">Advantages</h2>
+
+<p>An advantage of using homogeneous coordinates is that we can easily use multiple
+transformations by concatinating several matrix vector multiplications.</p>
+
+<p>In the euclidean space, given a point we can scale it and rotate it and
+translate it but we can’t do all these operations at the same time as scaling
+and rotation requires a matrix multiplication whereas translation requires a
+vector addition. To combine all these operations into a single matrix we
+transform the euclidean coordinate to homogeneous coordinate and now the
+translation operation also becomes a matrix multiplication as</p>
+
+\[\begin{bmatrix}
+1 &amp; 0 &amp; t_x \\
+0 &amp; 1 &amp; t_y \\
+0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} x \\ y \\ 1\end{bmatrix}\]
+
+<p>Thus we can now have one single transformation matrix by combining all the
+transformations together. We can save a lot of computational cost this way.</p>
+
+<p>It also allows us to represent points that are infinitely far away using finite
+numbers. For example to represent a point in infinity we have to write it as
+\(\begin{bmatrix}x &amp; y &amp; 0\end{bmatrix}\).</p>
+
+<h2 id="lines-in-images-2d">Lines in images (2d)</h2>
+
+<p>Given a point in 3d homogeneous coordinates, we can check if it lies on  a line
+in the 2d image. We can also find the 3d point of intersection of two lines in 
+an image. And given two 3d points, we can find the line in the image joining those points.</p>
+
+<p>A line is represented in the standard form as \(ax + by + c = 0\).</p>
+
+<p>We can write this in the vector form as \([a, b, c]^T [x, y, 1]\) Therefore if
+we know the coefficients of a line then we can multiply the \(u/w\) and \(v/w\) of a
+point in homogeneous coordinates and if we get 0 then that point in 3d lies on that
+line in that image.</p>
+
+<h3 id="how-to-find-intersection-of-two-lines">How to find intersection of two lines?</h3>
+
+<p>If we know the coefficients of two lines \(l\) and \(m\) and we want to find the
+point of intersection of the two lines, then that point \(X\) will be such that
+\(l^TX=0\) and \(m^TX=0\). Therefore we can write a matrix as 
+\(\begin{bmatrix} l1 &amp; l2 &amp; l3 \\ 
+m1 &amp; m2 &amp; m3 \end{bmatrix}\begin{bmatrix}x \\ y \\ 1 \end{bmatrix} = 0\)</p>
+
+<h3 id="how-to-find-the-line-joining-two-points">How to find the line joining two points?</h3>
+<p>We know \(X\) and \(Y\) of two points in the homogeneous coordinates. We have to
+find the \(L\). Then we can write this as \(\begin{bmatrix}x_1 &amp; x_2 &amp; 1\\
+y_1 &amp; y_2 &amp; 1\end{bmatrix} \begin{bmatrix}l_1\\ l_2 \\ l_3\end{bmatrix}= 
+\begin{bmatrix}0\\ 0\end{bmatrix}\)</p>
+
+<h3 id="lines-passing-through-a-point-at-infinity">Lines passing through a point at infinity</h3>
+
+<p>In homogeneous coordinates a point in infinity is represented as \([x, y , 0]\).
+If we want to find all the lines that pass through this point we need to do
+\(\begin{bmatrix} x &amp; y &amp; 0 \end{bmatrix} \begin{bmatrix}l1 \\ l2 \\
+l3\end{bmatrix} = \begin{bmatrix}0\\0\\0\end{bmatrix}\) Here we will get a fixed
+\(l1\) and \(l2\) but the \(l3\) can be anything thus proving that all the
+parallel lines meet at a point in infinity.</p>
+
+<h3 id="ideal-line">Ideal line</h3>
+
+<p>The ideal line represented as \([0, 0, 1]\) contains all the points at infinity.
+This line is also called the horizon. Thus any points at infinity \([x, y, 0]\)
+lies on this line as \(\begin{bmatrix}x &amp; y &amp; 0 \end{bmatrix}\begin{bmatrix}0\\
+0\\ 1\end{bmatrix} = \begin{bmatrix}0 \\ 0 \\ 0 \end{bmatrix}\)</p>
+
+<p>The same concepts can be represented in 3d as well where the homogeneous
+coordinates will be four dimensional. In \(3d\) we will have planes instead of a
+line and sky instead of horizon.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://wordsandbuttons.online/interactive_guide_to_homogeneous_coordinates.html">An interactive guide to homogeneous coordinates</a></li>
+  <li><a href="https://www.youtube.com/watch?v=MQdm0Z_gNcw&amp;t=572s">Homogeneous Coordinates (Cyrill Stachniss, 2020)</a></li>
+</ul>]]></content><author><name></name></author><category term="notes" /><category term="" /></entry></feed>
