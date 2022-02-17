@@ -124,8 +124,6 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-list { margin-left: 0; list-style: none; }
 
-.post-list > li { margin-bottom: 30px; }
-
 .post-meta { font-size: 14px; color: #828282; }
 
 .post-link { display: inline; font-size: 18.4px; }
