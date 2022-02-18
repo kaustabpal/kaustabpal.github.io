@@ -34,7 +34,7 @@ plugins:
   - jekyll-seo-tag
 
 image:
-  path: android-chrome-192x192.png
+  path: /assets/favicon/android-chrome-192x192.png
   height: 192
   width: 192
 
