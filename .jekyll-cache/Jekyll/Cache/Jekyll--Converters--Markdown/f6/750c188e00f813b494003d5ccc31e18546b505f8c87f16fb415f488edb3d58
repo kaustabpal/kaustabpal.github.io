@@ -1,0 +1,20 @@
+I"E<ul class="table-of-content" id="markdown-toc">
+  <li><a href="#working-with-multiple-files" id="markdown-toc-working-with-multiple-files">Working with multiple files</a></li>
+</ul>
+<h2 id="working-with-multiple-files">Working with multiple files</h2>
+<p>When we open nvim, what we see is a window in a tab. The window is the viewport
+that holds the buffers. When we open a file, we are actually copying the
+contents of the file onto a buffer and when we make changes to that copy and 
+write <code class="language-plaintext highlighter-rouge">:w</code>, the contents of the buffer is written in that file thus changing
+it. When we open multiple files each file will open in it’s own buffer. The 
+window will display only the active buffer while the other buffers will be hidden. 
+We can check the files in the buffers with the command <code class="language-plaintext highlighter-rouge">buffers</code>. We can switch to
+a buffer with the command <code class="language-plaintext highlighter-rouge">:b&lt;buffer number&gt;</code>. To close the active
+buffer we use the command <code class="language-plaintext highlighter-rouge">:bd</code>. To close a hidden buffer we use the command
+<code class="language-plaintext highlighter-rouge">:bd&lt;buffer number&gt;</code>.</p>
+
+<p>A tab can have multiple windows. Thus in a tab we can have multiple windows open
+through horizontal split <code class="language-plaintext highlighter-rouge">:hsplit</code> or <code class="language-plaintext highlighter-rouge">:split</code> or vertical split
+<code class="language-plaintext highlighter-rouge">:vsplit</code>.</p>
+
+:ET

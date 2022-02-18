@@ -1,0 +1,44 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+#markdown-toc::before {
+    content: "Contents";
+    font-size: $post-toc-title-size;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    // border: 1px solid #aaa;
+    display: block;
+    margin: 2em 0;
+    padding: 10px 20px;
+    position: relative;
+    background-color: rgba(192, 91, 77, 0.05);
+    border-left-color: rgba(192, 91, 77, 0.3);
+    border-left-style: solid;
+    border-left-width: 3px;
+    color: rgba(52, 73, 94, 0.8);
+    padding-left: 2em;
+    list-style: decimal;
+    font-size: $post-toc-content;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    
+}
+
+.bibliography {
+    margin-left: 0px;
+    list-style: none;
+}
+
+  
+

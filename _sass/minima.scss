@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #34495e !default;
+$background-color: #fefefe !default;
+$brand-color:      #c05b4d !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// ========== Code ========== //
+// Color of the code.
+$code-color: #c7254e !default;
+$code-font-size: 0.9em !default;
+$code-background: #f8f5ec;
+$code-highlight-color: (
+  comment: #93a1a1,
+  keyword: #859900,
+  number: #2aa198,
+  title: #268bd2,
+  attribute: #b58900,
+  symbol: #cb4b16,
+  built_in: #dc322f,
+  formula: #eee8d5
+) !default;
+
+// ========== TOC ========== //
+
+// Font size of the post toc title.
+$post-toc-title-size: 20px !default;
+
+// Font size of the post toc content.
+$post-toc-content: 15px !default;
+
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
