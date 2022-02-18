@@ -185,6 +185,9 @@
   flex: 1;
 }
 
+.page-header {
+  margin-bottom: $spacing-unit;
+}
 .page-heading {
   @include relative-font-size(2);
 }
