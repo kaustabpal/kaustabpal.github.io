@@ -33,11 +33,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-image:
-  path: /assets/favicon/android-chrome-192x192.png
-  height: 192
-  width: 192
-
 markdown: kramdown
 
 kramdown:
