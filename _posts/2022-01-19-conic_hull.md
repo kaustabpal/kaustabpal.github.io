@@ -2,7 +2,7 @@
 layout: post
 title: "Conic Hull"
 permalink: "conic_hull"
-date: 2022-02-19 21:34
+date: 2022-02-19 
 tags: [""]
 categories:
 ---
