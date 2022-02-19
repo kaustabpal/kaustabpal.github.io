@@ -2,13 +2,13 @@
 layout: post
 title: "Homogeneous Coordinates"
 permalink: "homogeneous_coordinates"
+date: 2021-12-29
 tags: [""]
 categories: notes
 ---
 
 {:class="table-of-content"}
-* TOC
-{:toc}
+* TOC {:toc}
 
 ## Definition
 

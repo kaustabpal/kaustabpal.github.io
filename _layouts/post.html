@@ -8,10 +8,10 @@ layout: default
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        LastMod: {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
   </header>
 
@@ -51,7 +51,8 @@ layout: default
     {%- endif -%}
 </div>
 
-  <script src="https://utteranc.es/client.js"
+<!---
+<script src="https://utteranc.es/client.js"
         repo="kaustabpal/kaustabpal.github.io"
         issue-term="pathname"
         label="Comment"
@@ -59,6 +60,6 @@ layout: default
         crossorigin="anonymous"
         async>
 </script>
-
+---!>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
