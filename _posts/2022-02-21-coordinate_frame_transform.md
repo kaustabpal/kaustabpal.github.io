@@ -8,14 +8,16 @@ categories:
 ---
 
 Let $$\{B\}$$ be a [ [Coordinate Frame] ]( {% post_url
-2022-02-21-coordinate_frame %} ) in the frame $$\{A\}$$. The following kinds of
+2022-02-21-coordinate_frame %} ) in frame $$\{A\}$$. The following kinds of
 transformations are possible between $$\{B\}$$ and $$\{A\}$$.
 
 ## Translation
 
-If $$\{B\}$$ has the same orientation as $$\{A\}$$ but the origin of $$\{B\}$$
-is at a distance og $$^AP_{Borg}$$ then if $$^BP$$ is a vector in $$\{B\}$$,
-then it can be represented in terms of $$\{A\}$$ as $$^AP=^BP + ^AP_{Borg}$$.
+If $$\{B\}$$ has the same [ [Orientation] ]( {% post_url
+2022-02-21-orientation %} ) as $$\{A\}$$ but the origin of
+$$\{B\}$$ is at a distance of $$^AP_{Borg}$$ then if $$^BP$$ is a vector in
+$$\{B\}$$, it can be represented in terms of $$\{A\}$$ as $$^AP=^BP +
+^AP_{Borg}$$.
 
 ## Rotation
 
