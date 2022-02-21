@@ -2,13 +2,14 @@
 layout: post
 title: "Homogeneous Coordinates"
 permalink: "homogeneous_coordinates"
-date: 2021-12-29
+date: 2022-02-21 21:28
 tags: [""]
 categories: notes
 ---
 
 {:class="table-of-content"}
-* TOC {:toc}
+* TOC 
+{:toc}
 
 ## Definition
 
@@ -59,8 +60,9 @@ $$ \begin{bmatrix} 1 & 0 & t_x \\ 0 & 1 & t_y \\ 0 & 0 & 1
 \end{bmatrix}\begin{bmatrix} x \\ y \\ 1\end{bmatrix}$$
 
 Thus we can now have one single transformation matrix by combining all the
-transformations together. We can save a lot of computational cost this way.
-
+transformations together. We can save a lot of computational cost this way. See
+[ [Coordinate Frame Transform] ]( {% post_url
+2022-02-21-coordinate_frame_transform %} )
 It also allows us to represent points that are infinitely far away using finite
 numbers. For example to represent a point in infinity we have to write it as
 $$\begin{bmatrix}x & y & 0\end{bmatrix}$$.
