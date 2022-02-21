@@ -5,6 +5,8 @@ permalink: "coordinate_transform"
 date: 2022-02-21 20:59
 tags: [""]
 categories:
+description: "Explanation of transformation from one coordinate frame to
+another."
 ---
 
 Let $$\{B\}$$ be a [ [Coordinate Frame] ]( {% post_url
