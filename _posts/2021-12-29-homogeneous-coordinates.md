@@ -63,6 +63,7 @@ Thus we can now have one single transformation matrix by combining all the
 transformations together. We can save a lot of computational cost this way. See
 [ [Coordinate Frame Transform] ]( {% post_url
 2022-02-21-coordinate_frame_transform %} )
+
 It also allows us to represent points that are infinitely far away using finite
 numbers. For example to represent a point in infinity we have to write it as
 $$\begin{bmatrix}x & y & 0\end{bmatrix}$$.

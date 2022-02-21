@@ -29,12 +29,11 @@ layout: default
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
-    
     {%- if link_count > 0 -%}
       <aside>
         <div class="backlink-box">
           <h4>Backlinks</h4>
-            {%- assign link_title = page.title -%}
+            {%- assign link_title = '[' | append: page.title | append: ']' -%}
               <ul>
                 {%- for note in site.posts -%}
                   {%- if note.url != page.url -%}
