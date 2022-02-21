@@ -7,8 +7,9 @@ tags: [""]
 categories:
 ---
 
-Let $$\{B\}$$ be a coordinate frame in the coordinate frame $$\{A\}$$. The
-following kinds of transformations are possible between $$\{B\}$$ and $$\{A\}$$.
+Let $$\{B\}$$ be a [ [Coordinate Frame] ]( {% post_url
+2022-02-21-coordinate_frame %} ) in the frame $$\{A\}$$. The following kinds of
+transformations are possible between $$\{B\}$$ and $$\{A\}$$.
 
 ## Translation
 
@@ -31,7 +32,5 @@ respect to $$\{A\}$$ given by $$^A_BR$$, then points in $$\{B\}$$ can be
 represented in terms of $$\{A\}$$ by using the homogeneous transformation matrix
 as
 
-$$ \begin{bmatrix}^AP \\ 1 \end{bmatrix} =  \begin{bmatrix}
-^A_BR && ^AP_{Borg} \\
-0 && 1
-\end{bmatrix} \begin{bmatrix}^BP \\ 1 \end{bmatrix}$$
+$$ \begin{bmatrix}^AP \\ 1 \end{bmatrix} =  \begin{bmatrix} ^A_BR && ^AP_{Borg}
+\\ 0 && 1 \end{bmatrix} \begin{bmatrix}^BP \\ 1 \end{bmatrix}$$
