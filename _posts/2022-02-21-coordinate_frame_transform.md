@@ -43,7 +43,7 @@ Since both the $$^A_BR$$ and $$^AP_{Borg}$$ are invertable, therefore we can say
 that the homogeneous transformation matrix is also invertible. 
 
 If we have a point $$^AP$$ in $$\{A\}$$ and we want to represent it in terms of $$\{B\}$$ as $$^BP$$,
-then we need to multiply $$^AP$$ with the inverse of $$\begin{bmatrix} ^A_BR && ^AP_{Borg}
+then we need to multiply $$^AP$$ with $$\begin{bmatrix} ^A_BR && ^AP_{Borg}
 \\ 0 && 1 \end{bmatrix}^{-1}$$.
 
 $$
