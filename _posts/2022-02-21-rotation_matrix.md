@@ -27,12 +27,17 @@ $$\begin{bmatrix}^{A}\hat{X}_{B}, ^{A}\hat{Y}_{B},
 We can expand $$\begin{bmatrix}^{A}\hat{X}_{B}, ^{A}\hat{Y}_{B},
 ^{A}\hat{Z}_{B}\end{bmatrix}$$ as 
 
-$$^{A}_{B}{R} = \begin{bmatrix}^{A}\hat{X}_{B}, ^{A}\hat{Y}_{B},
-^{A}\hat{Z}_{B}\end{bmatrix} = \begin{bmatrix}
+$$
+\begin{align*}
+
+^{A}_{B}{R} &= \begin{bmatrix}^{A}\hat{X}_{B}, ^{A}\hat{Y}_{B},
+^{A}\hat{Z}_{B}\end{bmatrix} \\
+&= \begin{bmatrix}
 ^{B}\hat{X}^{A}\hat{X} && ^{B}\hat{Y}^{A}\hat{X} &&^{B}\hat{Z}^{A}\hat{X} \\
 ^{B}\hat{X}^{A}\hat{Y} && ^{B}\hat{Y}^{A}\hat{Y} && ^{B}\hat{Z}^{A}\hat{Y} \\
 ^{B}\hat{X}^{A}\hat{Z} && ^{B}\hat{Y}^{A}\hat{Z} && ^{B}\hat{Z}^{A}\hat{Z}
 \end{bmatrix}
+\end{align*}
 $$
 
 If we are rotating along the $$z$$ axis, then only the $$^{B}\hat{X}$$ and
