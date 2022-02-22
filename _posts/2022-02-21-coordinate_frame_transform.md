@@ -2,7 +2,7 @@
 layout: post
 title: "Coordinate Frame Transform"
 permalink: "coordinate_transform"
-date: 2022-02-21 20:59
+date: 2022-02-23 00:05
 tags: [""]
 categories:
 description: "Explanation of transformation from one coordinate frame to
@@ -38,3 +38,63 @@ as
 
 $$ \begin{bmatrix}^AP \\ 1 \end{bmatrix} =  \begin{bmatrix} ^A_BR && ^AP_{Borg}
 \\ 0 && 1 \end{bmatrix} \begin{bmatrix}^BP \\ 1 \end{bmatrix}$$
+
+Since both the $$^A_BR$$ and $$^AP_{Borg}$$ are invertable, therefore we can say
+that the homogeneous transformation matrix is also invertible. 
+
+If we have a point $$^AP$$ in $$\{A\}$$ and we want to represent it in terms of $$\{B\}$$ as $$^BP$$,
+then we need to multiply $$^AP$$ with the inverse of $$\begin{bmatrix} ^A_BR && ^AP_{Borg}
+\\ 0 && 1 \end{bmatrix}^{-1}$$.
+
+$$
+\begin{align*}
+\begin{bmatrix}
+^A_BR && ^AP_{Borg} \\
+0 && 1
+\end{bmatrix}^{-1} &= 
+\begin{bmatrix} 
+\begin{bmatrix}
+I && ^AP_{Borg} \\
+0 && 1
+\end{bmatrix}
+\begin{bmatrix}
+^A_BR && 0 \\
+0 && 1
+\end{bmatrix}
+\end{bmatrix}^{-1} \\
+
+&= \begin{bmatrix}
+^A_BR && 0 \\
+0 && 1
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+I && ^AP_{Borg} \\
+0 && 1
+\end{bmatrix}^{-1} \\
+
+&= \begin{bmatrix}
+^A_BR^T && 0 \\
+0 && 1
+\end{bmatrix}
+\begin{bmatrix}
+I && -^AP_{Borg} \\
+0 && 1
+\end{bmatrix} \\
+
+&= \begin{bmatrix}
+^B_AR && 0 \\
+0 && 1
+\end{bmatrix}
+\begin{bmatrix}
+I && -^AP_{Borg} \\
+0 && 1
+\end{bmatrix} \\
+
+&= \begin{bmatrix}
+^B_AR && -^B_AR ^AP_{Borg} \\
+0 && 1
+\end{bmatrix}
+\end{align*}
+$$
+
+We know that $$^A_BR^{-1}$$ $$=$$ $$^A_BR^T$$ and $$^AP_{Borg}^{-1} = -^AP_{Borg}$$
