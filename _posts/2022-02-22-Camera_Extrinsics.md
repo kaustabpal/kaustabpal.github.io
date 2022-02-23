@@ -2,7 +2,7 @@
 layout: post
 title: "Camera Extrinsics"
 permalink: "camera_extrinsics"
-date: 2022-02-22 22:33
+date: 2022-02-23 11:04
 tags: [""]
 categories:
 ---
@@ -24,3 +24,7 @@ $$
 
 See [ [Coordinate Frame Transform] ]( {% post_url
 2022-02-21-coordinate_frame_transform %} ) for proof.
+
+The camera extrinsic matrix changes as the camera moves around in the world
+because the orientation and the position of the origin of the camera center with
+respect to the world will also change. 
