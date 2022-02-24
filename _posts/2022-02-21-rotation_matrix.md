@@ -62,7 +62,7 @@ Therefore $$\mid ^{B}\hat{X}\mid$$, $$\mid ^{B}\hat{Y}\mid$$, $$\mid
 Therefore we can write
 
 $$ \begin{align*} ^{A}_{B}{R}_z &= \begin{bmatrix} \cos \theta && -\sin \theta
-&& 0\\ \sin \theta && \cos theta && 0\\ 0 && 0 && 1 \end{bmatrix} \end{align*}
+&& 0\\ \sin \theta && \cos \theta && 0\\ 0 && 0 && 1 \end{bmatrix} \end{align*}
 $$
 
 Similarly we find  $$ ^{A}_{B}R_y = \begin{bmatrix} \cos \theta && 0 && \sin
