@@ -16,5 +16,5 @@ divisible by those two numbers.
 
 ## How to find the LCM of $$n$$ numbers
 
-LCM = product of the numbers / GCD of all the numbers
-
+Least Common Multiple = product of the numbers / [ [Greatest Common Divisor] ](
+{% post_url 2022-02-26-greatest_common_divisor %} ) of all the numbers
