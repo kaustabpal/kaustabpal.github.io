@@ -2,7 +2,7 @@
 layout: post 
 title: "Convex Set" 
 permalink: "convex_set"
-date: 2022-02-28 23:25
+date: 2022-03-06 01:30
 tags: [""] 
 categories: 
 ---
