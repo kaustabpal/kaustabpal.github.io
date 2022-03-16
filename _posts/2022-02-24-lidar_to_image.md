@@ -19,8 +19,8 @@ $$x$$ axis is pointing to the right, the $$y$$ axis is pointing to the down and
 the $$z$$ axis is pointing to the front. Therefore we need to represent the
 points in the camera coordinate frame in terms of the sensor coordinate frame.
 We do this by rotating the points in the camera frame first along the $$z$$ axis
-by an angle of $$90\degree$$ and then along the $$x$$ axis by an angle of
-$$90\degree$$. 
+by an angle of $$90^\circ $$ and then along the $$x$$ axis by an angle of
+$$90^\circ $$. 
 After the new points are in the sensor frame, we can multiply the points with the [
 [Camera Intrinsics] ]( {% post_url 2022-02-23-camera_intrinsics %} ) matrix to
 project the points in the sensor plane. The points are now in the [ [Homogeneous
