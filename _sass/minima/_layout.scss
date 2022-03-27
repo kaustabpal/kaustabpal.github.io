@@ -5,9 +5,7 @@
   border-top: 3px solid $background-color;
   border-bottom: 1px solid transparent;
   min-height: $spacing-unit * 1.865;
-  padding-top: 25px;
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  padding: $spacing-unit;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -135,9 +133,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  padding: 0 $spacing-unit;
   flex: 1;
 }
 
@@ -159,13 +155,11 @@
 }
 
 .post-meta {
-  font-size: $small-font-size;
   color: $grey-color;
 }
 
 .post-link {
   display: inline;
-  @include relative-font-size(1.15);
 }
 
 
