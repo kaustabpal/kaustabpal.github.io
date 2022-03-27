@@ -11,7 +11,7 @@
 }
 
 .site-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.0);
   font-family: 'Spectral', serif;
   font-style: italic;
   font-weight: 400;
@@ -35,7 +35,7 @@
 	float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
   font-family: 'Spectral', serif;
-  font-size: 18px;
+  font-size: 16px;
 
   .nav-trigger {
       display: none;
