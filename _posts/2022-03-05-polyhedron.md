@@ -3,6 +3,7 @@ layout: post
 title: "Polyhedron"
 permalink: "polyhedron"
 date: 2022-03-06 00:17
+moddate: 2022-03-06 00:17
 tags: [""]
 categories:
 description: ""

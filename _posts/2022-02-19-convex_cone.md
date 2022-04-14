@@ -3,6 +3,7 @@ layout: post
 title: "Convex Cone" 
 permalink: "convex_cone"
 date: 2022-02-19
+moddate: 2022-02-19
 tags: [""] 
 categories: 
 ---

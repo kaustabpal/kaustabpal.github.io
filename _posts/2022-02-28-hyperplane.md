@@ -3,6 +3,7 @@ layout: post
 title: "Hyperplane"
 permalink: "hyperplane"
 date: 2022-02-28 23:32
+moddate: 2022-02-28 23:32
 tags: [""]
 categories:
 description: ""

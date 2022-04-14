@@ -3,6 +3,7 @@ layout: post
 title: "Greatest Common Divisor"
 permalink: "gcd"
 date: 2022-02-26 00:23
+moddate: 2022-02-26 00:23
 tags: [""]
 categories:
 description: ""

@@ -3,6 +3,7 @@ layout: post
 title: "Affine Dimension"
 permalink: "affine_dimension"
 date: 2022-02-20
+moddate: 2022-02-20
 tags: [""]
 categories:
 ---

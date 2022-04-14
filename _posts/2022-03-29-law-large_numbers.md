@@ -3,6 +3,7 @@ layout: post
 title: "Law of large numbers"
 permalink: "law_lare_numbers"
 date: 2022-03-29 01:23
+moddate: 2022-03-29 01:23
 tags: [""]
 category:
 description: ""

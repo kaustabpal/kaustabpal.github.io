@@ -3,6 +3,7 @@ layout: post
 title: "Euclidean Ball"
 permalink: "euclidean_ball"
 date: 2022-03-05 11:08
+moddate: 2022-03-05 11:08
 tags: [""]
 categories:
 description: ""

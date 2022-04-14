@@ -3,6 +3,7 @@ layout: post
 title: "Convex Set" 
 permalink: "convex_set"
 date: 2022-03-06 01:30
+moddate: 2022-04-13 10:19
 tags: [""] 
 categories: 
 ---
@@ -24,7 +25,7 @@ Examples of Convex Sets:
 5. [ [Halfspace] ]( {% post_url 2022-02-28-halfspace %} )
 6. [ [Ellipsoid] ]( {% post_url 2022-03-05-ellipsoid %} )
 
-Operations that preserve convexity:
+**Operations that preserve convexity:**
 1. Intersection: If two sets $$S_1$$ and $$S_2$$ are convex, then $$S_1 \cap
    S_2$$ is convex.
    
@@ -41,3 +42,11 @@ Operations that preserve convexity:
    and [ [Convex Cone]s ]( {% post_url 2022-02-19-convex_cone %} ) are also
    closed under arbitrary number of intersections. An exaple of this is a [
    [Polyhedron] ]( {% post_url 2022-03-05-polyhedron %} ).
+
+2. [ [Affine functions] ]( {% post_url 2022-04-13-affine_function %} ) : If $$S
+   \subseteq R^n$$ is a convex set and $$f:R^n \rightarrow R^m$$ is an affine
+   function then the image of $$S$$ under $$f$$ is $$f(S) = \{ f(x) \mid x \in S
+   \}$$. Similarly the inverse image of $$S$$ under $$f$$ such that $$f^{-1}(S)
+   = \{ x \mid f(x) \in S\}$$ is also convex.
+
+3. Linear fractional and Perspective transform

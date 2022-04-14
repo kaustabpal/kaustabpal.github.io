@@ -3,8 +3,9 @@ layout: post
 title: "Conic Combination"
 permalink: "conic_combination"
 date: 2022-02-19
+moddate: 2022-02-19
 tags: [""]
-categories:
+categorie:
 ---
 
 Given a set of points $$x_1, x_2, \dots, x_k$$, the conic combination of these

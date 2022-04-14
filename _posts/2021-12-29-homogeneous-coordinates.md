@@ -3,6 +3,7 @@ layout: post
 title: "Homogeneous Coordinates"
 permalink: "homogeneous_coordinates"
 date: 2022-02-21 21:28
+moddate: 2022-02-21 21:28
 tags: [""]
 categories: notes
 ---

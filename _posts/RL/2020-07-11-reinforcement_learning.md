@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Experiments with DQN"
+date: 2020-07-11
+moddate: 2020-07-11
 category: hub
 tags: reinforcement-learning
 permalink: "dqn"

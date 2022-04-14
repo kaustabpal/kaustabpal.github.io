@@ -3,6 +3,7 @@ layout: post
 title: "Panoptic Segmentation" 
 permalink: "panoptic_segmentation"
 date: 2022-02-14
+moddate: 2022-02-14
 tags: ["vision"] 
 categories: notes
 ---

@@ -3,6 +3,7 @@ layout: post
 title: "Affine Hull"
 permalink: "affine_hull"
 date: 2022-02-20 
+moddate: 2022-02-20 
 tags: [""]
 categories:
 ---

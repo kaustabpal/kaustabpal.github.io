@@ -3,6 +3,7 @@ layout: post
 title: "Convex Combination" 
 permalink: "convex_combination"
 date: 2022-02-19
+moddate: 2022-02-19
 tags: [""] 
 categories: 
 ---
