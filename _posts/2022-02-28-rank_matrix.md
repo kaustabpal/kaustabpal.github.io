@@ -5,7 +5,7 @@ permalink: "rank_matrix"
 date: 2022-02-28
 moddate: 2022-02-28 19:01
 tags: [""]
-categories:
+category:
 description: ""
 ---
 
