@@ -2,7 +2,7 @@
 layout: post
 title: "Experiments with DQN"
 date: 2020-07-11
-moddate: 2020-07-11
+moddate: 2022-05-05
 category: hub
 tags: reinforcement-learning
 permalink: "dqn"
@@ -599,6 +599,6 @@ The full working code can be found [here](https://github.com/kaustabpal/RL_algor
 
 [1] [Mnih et al. "Playing atari with deep reinforcement learning."](https://arxiv.org/abs/1312.5602){:target="_blank"}
 
-[2] [Mnih et al. "Human-level control through deep reinforcement learning."](https://deepmind.com/research/publications/human-level-control-through-deep-reinforcement-learning){:target="_blank"}
+[2] [Mnih et al. "Human-level control through deep reinforcement learning."](https://www.deepmind.com/publications/human-level-control-through-deep-reinforcement-learning"}
 
 [3] [Lillicrap et al. "Continuous control with deep reinforcement learning."](https://arxiv.org/abs/1509.02971){:target="_blank"}
