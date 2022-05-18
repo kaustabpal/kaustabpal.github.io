@@ -2,8 +2,8 @@
 layout: post
 title: "Principal Point"
 permalink: "principal_point"
+idate: 2022-02-23 23:31
 date: 2022-02-23 23:31
-moddate: 2022-02-23 23:31
 tags: [""]
 categories:
 description: ""

@@ -2,8 +2,8 @@
 layout: post
 title: "Homogeneous Coordinates"
 permalink: "homogeneous_coordinates"
+idate: 2022-02-21 21:28
 date: 2022-02-21 21:28
-moddate: 2022-02-21 21:28
 tags: [""]
 categories: notes
 ---

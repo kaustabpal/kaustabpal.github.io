@@ -2,8 +2,8 @@
 layout: post
 title: "Coordinate Frame"
 permalink: "coordinate_frame"
+idate: 2022-02-21 18:48
 date: 2022-02-21 18:48
-moddate: 2022-02-21 18:48
 tags: [""]
 categories:
 ---

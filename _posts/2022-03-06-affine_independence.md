@@ -2,8 +2,8 @@
 layout: post
 title: "Affine Independence"
 permalink: "affine_independence"
+idate: 2022-03-06 00:39
 date: 2022-03-06 00:39
-moddate: 2022-03-06 00:39
 tags: [""]
 categories:
 description: ""

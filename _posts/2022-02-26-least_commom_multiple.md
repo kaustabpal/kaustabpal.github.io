@@ -2,8 +2,8 @@
 layout: post
 title: "Least Common Multiple"
 permalink: "lcm"
+idate: 2022-02-26 00:57
 date: 2022-02-26 00:57
-moddate: 2022-02-26 00:57
 tags: [""]
 categories:
 description: ""

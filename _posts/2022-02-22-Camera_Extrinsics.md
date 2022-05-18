@@ -2,8 +2,8 @@
 layout: post
 title: "Camera Extrinsics"
 permalink: "camera_extrinsics"
+idate: 2022-02-23 11:04
 date: 2022-02-23 11:04
-moddate: 2022-02-23 11:04
 tags: [""]
 categories:
 ---

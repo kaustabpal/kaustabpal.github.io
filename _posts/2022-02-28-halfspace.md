@@ -2,8 +2,8 @@
 layout: post
 title: "Halfspace"
 permalink: "halfspace"
+idate: 2022-03-03 22:50
 date: 2022-03-03 22:50
-moddate: 2022-03-03 22:50
 tags: [""]
 categories:
 description: ""

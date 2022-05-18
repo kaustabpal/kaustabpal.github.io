@@ -2,8 +2,8 @@
 layout: post
 title: "KL Divergence"
 permalink: "kl_divergence"
+idate: 2022-03-28 23:38
 date: 2022-03-28 23:38
-moddate: 2022-03-28 23:38
 tags: [""]
 category:
 description: ""

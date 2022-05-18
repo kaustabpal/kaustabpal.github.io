@@ -2,8 +2,8 @@
 layout: post
 title: "Ellipsoid"
 permalink: "ellipsoid"
+idate: 2022-04-07 14:29
 date: 2022-04-07 14:29
-moddate: 2022-04-07 14:29
 tags: [""]
 categories:
 description: ""

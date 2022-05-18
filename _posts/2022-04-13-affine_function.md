@@ -2,8 +2,8 @@
 layout: post
 title: "Affine Function"
 permalink: "affine_function"
-date: 2022-04-13
-moddate: 2022-04-23 12:30
+idate: 2022-04-13
+date: 2022-04-23 12:30
 tags: [""]
 category:
 description: ""

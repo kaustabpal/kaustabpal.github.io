@@ -2,8 +2,8 @@
 layout: post
 title: "Coordinate Frame Transform"
 permalink: "coordinate_transform"
+idate: 2022-02-23 00:05
 date: 2022-02-23 00:05
-moddate: 2022-02-23 00:05
 tags: [""]
 categories:
 description: "Explanation of transformation from one coordinate frame to

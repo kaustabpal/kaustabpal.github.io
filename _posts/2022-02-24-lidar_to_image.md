@@ -2,8 +2,8 @@
 layout: post
 title: "Lidar to Camera Projection"
 permalink: "lidar_to_camera"
-date: 2022-02-24
-moddate: 2022-02-25 11:33
+idate: 2022-02-24
+date: 2022-02-25 11:33
 category: top
 description: "How to project lidar points to an image."
 ---

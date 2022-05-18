@@ -2,8 +2,8 @@
 layout: post
 title: "Project Euler: Problem 1"
 permalink: "project_euler_1"
-date: 2022-02-26
-moddate: 2022-02-26 19:41
+idate: 2022-02-26
+date: 2022-02-26 19:41
 category: top
 description: ""
 ---

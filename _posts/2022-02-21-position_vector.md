@@ -2,8 +2,8 @@
 layout: post
 title: "Position"
 permalink: "position_vector"
+idate: 2022-02-21 12:02
 date: 2022-02-21 12:02
-moddate: 2022-02-21 12:02
 tags: [""]
 categories:
 ---

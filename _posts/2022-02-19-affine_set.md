@@ -2,8 +2,8 @@
 layout: post
 title: "Affine Set"
 permalink: "affine_set"
+idate: 2022-02-20
 date: 2022-02-20
-moddate: 2022-02-20
 tags: [""]
 categories:
 ---

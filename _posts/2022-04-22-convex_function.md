@@ -2,8 +2,8 @@
 layout: post
 title: "Convex Function"
 permalink: "convex_function"
-date: 2022-04-22 18
-moddate: 2022-04-23 12:17
+idate: 2022-04-22 18
+date: 2022-04-23 12:17
 tags: [""]
 category:
 description: ""

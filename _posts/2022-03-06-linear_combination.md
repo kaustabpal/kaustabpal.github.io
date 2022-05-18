@@ -2,8 +2,8 @@
 layout: post
 title: "Linear Combination"
 permalink: "linear_combination"
+idate: 2022-03-06 00:45
 date: 2022-03-06 00:45
-moddate: 2022-03-06 00:45
 tags: [""]
 categories:
 description: ""

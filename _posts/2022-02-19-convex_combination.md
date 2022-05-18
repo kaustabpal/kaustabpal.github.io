@@ -2,8 +2,8 @@
 layout: post 
 title: "Convex Combination" 
 permalink: "convex_combination"
+idate: 2022-02-19
 date: 2022-02-19
-moddate: 2022-02-19
 tags: [""] 
 categories: 
 ---

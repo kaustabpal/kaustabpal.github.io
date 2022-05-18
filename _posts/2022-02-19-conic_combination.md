@@ -2,8 +2,8 @@
 layout: post
 title: "Conic Combination"
 permalink: "conic_combination"
+idate: 2022-02-19
 date: 2022-02-19
-moddate: 2022-02-19
 tags: [""]
 categorie:
 ---

@@ -2,8 +2,8 @@
 layout: post
 title: "Rotation Matrix"
 permalink: "rotation_matrix"
+idate: 2022-02-21 14:35
 date: 2022-02-21 14:35
-moddate: 2022-02-21 14:35
 tags: [""]
 categories:
 ---

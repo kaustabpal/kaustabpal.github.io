@@ -2,8 +2,8 @@
 layout: post
 title: "Rank of a Matrix"
 permalink: "rank_matrix"
-date: 2022-02-28
-moddate: 2022-03-08
+idate: 2022-02-28
+date: 2022-03-08
 category: 
 description: ""
 ---
