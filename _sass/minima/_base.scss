@@ -111,8 +111,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: #000;
   }
 
   .social-media-list &:hover {
@@ -133,17 +132,15 @@ blockquote {
   margin: 2em 0;
   padding: 10px 20px;
   position: relative;
-  background-color: rgba(192, 91, 77, 0.05);
-  border-left-color: rgba(192, 91, 77, 0.3);
   border-left-style: solid;
   border-left-width: 3px;
-  box-shadow: rgba(0, 0, 0, 0.125) 1px 1px 2px 0px;
+//  box-shadow: rgba(0, 0, 0, 0.125) 1px 1px 2px 0px;
   color: rgba(52, 73, 94, 0.8);
 }
 
 ::selection {
-  background: #c05b4d;
-  color: $background-color;
+  background: #D6EDFF;
+  color: #222;
   }
 
 
