@@ -13,7 +13,7 @@ excerpt: "Observations on how DQN performs when hyperparameters related to it's 
 * TOC
 {:toc}
 
-# Theory
+## Theory
 
 In tabular Q-learning, we maintain a table that contains the Q-values for all the actions we can perform in a particular state. As the state space keeps increasing, the space-complexity of tabular Q-learning increases as well and after a certain point it becomes very inefficient. To solve this, we use a deep neural network to estimate the Q-values. The deep neural network takes in the current state as input and outputs the Q-values of the actions. We select the action with the maximum Q-value. Since neural networks are good function approximators, similar states will give us similar Q-values. In DQN instead of updating a Q-table we update the parameters of the neural network to make better predictions. The parameter updates are done by gradient descent $$(target - Q(\text{current\_state}))^2.$$ 
 
@@ -24,13 +24,13 @@ target  = r + DISCOUNT_FACTOR * np.amax(Q(next_state))
 # np.amax: Numpy method that returns the maximum of an array or maximum along an axis.
 ```
 
-## Limitations
+### Limitations
 
 1. The problem with this approach is that everytime we perform gradient-descent to update our neural network parameters, our targets will also be changing. Thus our neural network will try to converge to an unstable target and this will make the learning process very very unstable.
 
 2. As the agent interacts in the environment, it collects experiences (current_state, action, next_state, reward) which are used to update the neural network weights. The problem with this is neural networks generalize over the input data. If the input data are highly correlated then the neural network will generalize over correlated data and the learning will be inefficient.
 
-### Solution for limitation 1
+#### Solution for limitation 1
 
 To solve the problem of a constantly changing target we use another Q-network called Q-target to calculate the target values. As the agent interacts with the environment, it uses the main Q-network to select the actions. After every episode the main Q-network's weights are updated by gradient descent $$(target - Q(\text{current\_state}))^2$$, where the $$target$$ is calculated from the Q-target network. The Q-target network is updated to the weights of the constantly updated main Q-network after long intervals to give the main Q-network time to converge to a target. The interval after which the Q-target network is updated is another hyperparameter that needs to be adjusted.
 
@@ -43,17 +43,17 @@ Q_target = (1 - TAU) * Q_Target + TAU * Q
 # TAU is a hyperparameter that needs to be adjusted.
 ```
 
-### Solution for limitation 2
+#### Solution for limitation 2
 
 To solve the problem of correlated data we use an experience replay buffer. We store all of our agent's experiences in the replay buffer. After a certain amount of experiences have been stored, we randomly sample a mini-batch of experiences and use that mini-batch to update the main Q-network parameters.
 
-## DQN Architecture
+### DQN Architecture
 
 ![](/assets/img/RL/DQN/DQNarchitecture.png)
 
 *Fig 1: DQN Architecture. Image source: [Nair, Arun, et al. "Massively parallel methods for deep reinforcement learning."](https://arxiv.org/abs/1507.04296)*
 
-## DQN Algorithm
+### DQN Algorithm
 
 ``` python
 # Initialize replay memory D to capacity N.
@@ -84,7 +84,7 @@ for n_epi in range(total_episodes):
     q_target.set_weights(q.get_weights())
 ``` 
 
-# Environment
+## Environment
 
 For our environment we will be using OpenAI gym's CartPole-v1 environment. Description of the environment from [OpenAI gym's website](https://gym.openai.com/envs/CartPole-v1/) is as follows:
 > A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The system is controlled by applying a force of +1 or -1 to the cart. The pendulum starts upright, and the goal is to prevent it from falling over. A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
@@ -96,7 +96,7 @@ Each observation in our environment is an array of 4 numbers where each number r
 
 Our action space consists of 2 discreete actions, left (0) and right (1).
 
-# Code implementation
+## Code implementation
 
 For implementing the algorithm, I used Tensorflow for writing the Q-network which is a deep neural net. The Tensorflow version I am using is 2.2.0.
 
@@ -264,7 +264,7 @@ class Qnet: # Q-network class
             return np.argmax(self.model.predict(obs))
 ```
 
-# Experiments
+## Experiments
 
 **Goals:**
 
@@ -316,7 +316,7 @@ MINI_BATCH_SIZE = 32 64 128 256
 
 ---
 <br>
-## Experiment 1: No seperate target network<sup>[1]</sup>
+### Experiment 1: No seperate target network<sup>[1]</sup>
 
 In this experiment we will not use a seperate target network but will use the same main Q-network to calculate the target values for training our neural net. The training function without a seperate target network looks like this.
 
@@ -353,7 +353,7 @@ From the observations we can see that the DQN performance never converges. It is
 
 ---
 <br>
-## Experiment 2. Seperate target network but not updated
+### Experiment 2. Seperate target network but not updated
 
 In this experiment, a seperate target network Q-target is used. In the begining, Q-target is initialized to the weights of the main Q-network, but it is never updated. The main Q-network converges towards the targets generated by this constant target network Q-target.
 
@@ -385,7 +385,7 @@ Observation 2 supports our hypothesis that our main Q-network will try to conver
 
 ---
 <br>
-## Experiment 3. Hard update the target network<sup>[2]</sup>
+### Experiment 3. Hard update the target network<sup>[2]</sup>
 
 In this experiment, the target network Q-target is updated to the weights of the main Q-network after UPDATE_TARGET_INTERVAL number of episodes. Here UPDATE_TARGET_INTERVAL is a hyperparameter. Performance of the DQN agent will be tested over the following values of UPDATE_TARGET_INTERVAL:
 
@@ -443,7 +443,7 @@ Observation 2 validates conclusion 1 and thus our hypothesis. From observation 2
 
 ---
 <br>
-## Experiment 4. Soft update target network<sup>[3]</sup>
+### Experiment 4. Soft update target network<sup>[3]</sup>
 
 In this experiment the target network Q-target is updated by a tiny amount every time the main Q-network is trained. The tiny amount by which the target network is updated is determined by TAU. Here TAU is a hyperparameter.  The soft update formula is given by: 
 ``` python
@@ -516,7 +516,7 @@ In all of the above experiments, for all the hyperparameter values for which the
 ---
 <br>
 
-## Experiment 5: Increase the number of hidden layers
+### Experiment 5: Increase the number of hidden layers
 
 In this experiment, the number of hidden layers is increased while keeping the NUMBER_OF_UNITS constant. Each hidden layer will use the ReLU activation function. From all the above experiments we will take only those hyperparameter values that lead to the best performance of the DQN agent. We notice that the DQN agent performs better and in a more stable way if we perform soft updates with TAU = 0.0001. While performing soft updates, we noticed that as the MINI_BATCH_SIZE increases, the performance improves quickly, so we will be using a MINI_BATCH_SIZE of 256 here along with soft updating the target network with TAU = 0.0001.
 
@@ -552,7 +552,7 @@ From observation 2, we see that the performance does improve even though the imp
 ---
 <br>
 
-# Conclusion
+## Conclusion
 
 From all the above experiments the following conclusions are drawn:
 
@@ -595,7 +595,7 @@ The instability in DQN is mainly due to the constantly changing target. Even tho
 
 The full working code can be found [here](https://github.com/kaustabpal/RL_algorithms).
 
-# References
+## References
 
 [1] [Mnih et al. "Playing atari with deep reinforcement learning."](https://arxiv.org/abs/1312.5602){:target="_blank"}
 
