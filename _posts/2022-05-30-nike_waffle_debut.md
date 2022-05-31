@@ -35,3 +35,11 @@ My avg pace during the run was 7'39''. Lastly I love how the shoe looks on my
 foot. Has a very retro style. Even the Nike text has a retro font. Also the design and
 the color of the shoe will go with any casual outfit. 
 
+## Day 2 (2022-05-31)
+
+No complains till now. Feels really comfortable. Looks amazing with dark blue
+jeans. I wish I would have taken a photo but I forgot. Will do it some other
+day. I wore it from 1000hrs to 2030hrs. I didn't feel any discomfort at all.
+Only in the afternoon when I was outside the shoe got a little bit hot but that
+was supposed to happen as the temperature was really high in the afternoon (approx
+37 deg celsius)
