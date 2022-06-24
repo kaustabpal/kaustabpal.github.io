@@ -3,7 +3,7 @@ layout: post
 title: "Notes on Nike Waffle Debut"
 permalink: "nike_waffle_debut"
 idate: 2022-05-30 19:53
-date: 2022-05-30 19:53
+date: 2022-06-24 11:40
 tags: [""]
 category: top
 description: ""
