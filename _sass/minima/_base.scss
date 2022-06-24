@@ -58,7 +58,13 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
+img + em { 
+display: block;
+text-align: center;
+width: 75%;
+margin: 10px auto 35px;
+color: #888;
+}
 
 
 /**
