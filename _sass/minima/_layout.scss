@@ -154,7 +154,7 @@
 }
 
 .post-meta {
-  color: $grey-color;
+  color: #878480; // $grey-color;
   padding-bottom: 5px;
 }
 
@@ -225,8 +225,8 @@
   border-left-color: rgba(160, 0, 0, 0.3);
   border-left-style: solid;
   border-left-width: 3px;
-  color: rgba(52, 73, 94, 0.8);
-  font-size: $post-toc-content;
+  color: $text-color;
+  //font-size: $post-toc-content;
   box-sizing: border-box;
   word-wrap: break-word;
 }

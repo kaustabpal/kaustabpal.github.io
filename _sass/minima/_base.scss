@@ -109,11 +109,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: #3ea7d3; //$brand-color;
   text-decoration: none;
 
   &:visited {
-    color: $brand-color
+    color: #3ea7d3; //$brand-color;
   }
 
   &:hover {
@@ -142,12 +142,12 @@ blockquote {
   border-left-width: 3px;
   font-size: 0.95em;
 //  box-shadow: rgba(0, 0, 0, 0.125) 1px 1px 2px 0px;
-  color: rgba(52, 73, 94, 0.8);
+  color: #828282;
 }
 
 
 ::selection {
-  background: #D6EDFF;
+  background: #c3cfd4;
   color: #222;
   }
 

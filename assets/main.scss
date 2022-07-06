@@ -16,14 +16,14 @@
 }
 
 #markdown-toc {
-    border: 1px solid #aaa;
+    border: 1px solid #674b3a; //#aaa;
     display: block;
     margin: 2em 0;
     padding: 10px 20px;
     position: relative;
     padding-left: 2em;
     list-style: decimal;
-    font-size: $post-toc-content;
+    //font-size: $post-toc-content;
     word-wrap: break-word;
 }
 
