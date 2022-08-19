@@ -10,9 +10,9 @@ $base-line-height: 1.6 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #191817 !default;
+$text-color:       #444 !default;
 $background-color: #ffffff !default;
-$brand-color:      #57A3E8 !default;
+$brand-color:      #0645ad !default;
 
 $grey-color:       #878480 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -45,7 +45,7 @@ $on-laptop:        700px !default;
 
 // ========== Code ========== //
 // Color of the code.
-$code-color: #c7254e !default;
+$code-color: #f8f8f2 !default;
 $code-font-size: 0.9em !default;
 $code-background: #272822;
 $code-highlight-color: (

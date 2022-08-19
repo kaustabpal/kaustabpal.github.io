@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -39,8 +37,6 @@ ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * `main` element
@@ -109,15 +105,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #3ea7d3; //$brand-color;
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: #3ea7d3; //$brand-color;
+    color: $brand-color; //$brand-color;
   }
 
   &:hover {
-    color: #000;
+    color: #06e;
   }
 
   .social-media-list &:hover {
@@ -165,7 +161,7 @@ code {
 }
 
 code {
-  padding: 3px 5px;
+  padding: 1px 3px;
   border-radius: 4px;
   color: $code-color;
 }
