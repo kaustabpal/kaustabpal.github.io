@@ -25,7 +25,7 @@ action with the maximum Q-value. Since neural networks are good function
 approximators, similar states will give us similar Q-values. In DQN instead of
 updating a Q-table we update the parameters of the neural network to make better
 predictions. The parameter updates are done by gradient descent $$(target -
-Q(\text{current\_state}))^2.$$ 
+Q(current\_state))^2.$$ 
 
 The target of the loss function is given by 
 

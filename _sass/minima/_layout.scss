@@ -155,7 +155,7 @@
 }
 
 .post-meta {
-  color: #878480; // $grey-color;
+  color: $grey-color;
   padding-bottom: 10px;
 }
 
@@ -222,8 +222,8 @@
   margin: 2em 0;
   padding: 10px 20px;
   position: relative;
-  background-color: rgba(255, 0, 0, 0.015);
-  border-left-color: rgba(255, 0, 0, 1.0);
+  background-color: rgba(243,232,231, 0.1);
+  border-left-color: rgba(6,109,86, 1.0);
   border-left-style: solid;
   border-left-width: 3px;
   color: $text-color;
