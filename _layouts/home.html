@@ -14,7 +14,7 @@ layout: default
       {%- for post in site.posts -%}
       <li>
 		  {% if post.category == "hub" or post.category == "top" %}
-          {%- assign date_format = site.minima.date_format | default: "%d-%m-%Y&nbsp&nbsp" -%}
+          {%- assign date_format = site.minima.date_format | default: "%d-%m-%Y&nbsp;&nbsp;" -%}
           <div class="post-meta">{{ post.date | date: date_format }}
 			  <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
