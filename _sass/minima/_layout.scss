@@ -2,9 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 3px solid $background-color;
-  border-bottom: 1px solid #eaeae9;
   min-height: $spacing-unit * 1.865;
+  border-bottom: 1px solid $grey-color;
   padding-top: 10px;
   padding-bottom: 10px;
   // Positioning context for the mobile navigation icon
@@ -15,6 +14,7 @@
   @include relative-font-size(2);
 //  font-family: 'Spectral', serif;
 //  font-style: italic;
+  color: #dd571c;
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -23,11 +23,11 @@
 
   &,
   &:hover {
-	  color: $text-color;
+	  color: #dd571c;
 	  text-decoration: none;
   }
   &:visited {
-    color: $text-color;
+    color: #cc5801;
 	text-decoration: none;
   }
 }
@@ -49,7 +49,7 @@
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
-      margin-right: 10px;
+      margin-right: 15px;
   &:hover {
 	  text-decoration: underline;
   }
@@ -63,7 +63,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $grey-color;
   padding: $spacing-unit;
 }
 

@@ -16,7 +16,7 @@
 }
 
 #markdown-toc {
-    border: 1px solid #674b3a; //#aaa;
+    border: 1px solid $grey-color; //#aaa;
     display: block;
     margin: 2em 0;
     padding: 10px 20px;
@@ -27,10 +27,6 @@
     word-wrap: break-word;
 }
 
-.bibliography {
-    margin-left: 0px;
-    list-style: none;
-}
 
   
 
