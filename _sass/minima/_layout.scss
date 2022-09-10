@@ -14,7 +14,7 @@
   @include relative-font-size(2);
 //  font-family: 'Spectral', serif;
 //  font-style: italic;
-  color: #dd571c;
+  color: #FF4F00;
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -23,17 +23,18 @@
 
   &,
   &:hover {
-	  color: #dd571c;
+	  color: #FF4F00;
 	  text-decoration: none;
   }
   &:visited {
-    color: #cc5801;
+    color: #FF4F00;
 	text-decoration: none;
   }
 }
 
 .site-nav {
 	font-size: 16px;
+	font-weight: 600;
 	float: left;
 
   .nav-trigger {
@@ -49,7 +50,7 @@
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
-      margin-right: 15px;
+      margin-right: 10px;
   &:hover {
 	  text-decoration: underline;
   }
@@ -222,8 +223,8 @@
   margin: 2em 0;
   padding: 10px 20px;
   position: relative;
-  background-color: rgba(243,232,231, 0.1);
-  border-left-color: rgba(6,109,86, 1.0);
+  background-color: $background-color;
+  border-left-color: #008639;
   border-left-style: solid;
   border-left-width: 3px;
   color: $text-color;
