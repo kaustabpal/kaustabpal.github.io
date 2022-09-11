@@ -3,9 +3,9 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-  border-bottom: 1px solid $grey-color;
+  //border-bottom: 1px solid $grey-color;
   padding-top: 10px;
-  padding-bottom: 10px;
+  //padding-bottom: 10px;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -14,7 +14,7 @@
   @include relative-font-size(2);
 //  font-family: 'Spectral', serif;
 //  font-style: italic;
-  color: #FF4F00;
+  color: #444;
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -23,11 +23,11 @@
 
   &,
   &:hover {
-	  color: #FF4F00;
+	  color: #444;
 	  text-decoration: none;
   }
   &:visited {
-    color: #FF4F00;
+    color: #444;
 	text-decoration: none;
   }
 }
