@@ -14,7 +14,7 @@
   @include relative-font-size(2);
 //  font-family: 'Spectral', serif;
 //  font-style: italic;
-  color: #444;
+  color: $text-color;
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
@@ -23,11 +23,11 @@
 
   &,
   &:hover {
-	  color: #444;
+	  color: $text-color;
 	  text-decoration: none;
   }
   &:visited {
-    color: #444;
+    color: $text-color;
 	text-decoration: none;
   }
 }
