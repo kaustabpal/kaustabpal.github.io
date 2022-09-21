@@ -60,27 +60,32 @@ $post-toc-content: 15px !default;
 
 .site-header {
   min-height: $spacing-unit * 1.865;
-  padding-top: 10px;
+  padding-bottom: 10px;
   //padding-bottom: 10px;
   // Positioning context for the mobile navigation icon
   position: relative;
-  border-bottom: 1px solid $text-color;
+border-bottom: 1px solid $text-color;
 }
 .header-wrapper {
   margin-right: auto;
   margin-left: auto;
+  @extend %clearfix;
 }
 .site-title {
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: -1px;
   float: left;
+  text-decoration: none;
 }
 .site-nav {
-	float: right;
-	padding-top: 1.1em;
+   float: left;
   .page-link {
-      margin-left: 10px;
+      margin-right: 10px;
+      &,
+      &:hover {
+          color: #FF4F00;
+      }
   }
 }
 body {
@@ -130,11 +135,11 @@ border-top: 1px solid $text-color;
 padding: 30px;
 }
 .footer-wrapper {
-	padding-top: 10px;
-	padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 .footer-left {
-	float: left;
+    float: left;
 
   .footer-link {
     // Gaps between nav items, but not on the last one
@@ -142,7 +147,7 @@ padding: 30px;
   }
   }
 .footer-right {
-	float: right;
+    float: right;
 
   .footer-link {
     // Gaps between nav items, but not on the last one
