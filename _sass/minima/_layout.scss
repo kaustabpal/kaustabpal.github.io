@@ -5,9 +5,10 @@
   min-height: $spacing-unit * 1.865;
   //border-bottom: 1px solid $grey-color;
   padding-top: 10px;
-  //padding-bottom: 10px;
+  padding-bottom: 10px;
   // Positioning context for the mobile navigation icon
   position: relative;
+  //background-color: rgba(0,0,0,0.8);
 }
 
 .site-title {
@@ -16,7 +17,6 @@
 //  font-style: italic;
   color: $text-color;
   font-weight: 700;
-  line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
@@ -180,6 +180,7 @@
   letter-spacing: -0.5px;
   line-height: 1;
   margin-bottom: 0.4*$spacing-unit;
+  color: $text-color;
 
   @include media-query($on-laptop) {
     @include relative-font-size(1.8);
@@ -224,7 +225,7 @@
   padding: 10px 20px;
   position: relative;
   background-color: $background-color;
-  border-left-color: #008639;
+  border-left-color: #fdfe00;
   border-left-style: solid;
   border-left-width: 3px;
   color: $text-color;

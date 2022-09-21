@@ -3,26 +3,22 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
 
   <h1 class="post-list-heading">{{ page.list_title | default: "Entry points" }}</h1>
 
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
+          {% if post.category == "hub" or post.category == "top" %}
       <li>
-		  {% if post.category == "hub" or post.category == "top" %}
           {%- assign date_format = site.minima.date_format | default: "%d-%m-%Y&nbsp;&nbsp;" -%}
           <div class="post-meta">{{ post.date | date: date_format }}
-			  <a class="post-link" href="{{ post.url | relative_url }}">
+            <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
           </div>
-		  {%- endif -%}
       </li>
+          {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}

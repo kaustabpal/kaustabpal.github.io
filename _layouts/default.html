@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description | default: site.github.project_tagline }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    {%- feed_meta -%}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
   <body>
-
     {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
+	<main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
-
     {%- include footer.html -%}
-
   </body>
-
 </html>
+
+
+
+
+
+
