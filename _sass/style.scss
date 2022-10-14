@@ -108,6 +108,10 @@ h2,
 h3 {
   line-height: 1.2;
 }
+h2,
+h3 {
+    font-style: italic;
+}
 
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;

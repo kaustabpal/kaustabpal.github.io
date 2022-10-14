@@ -58,7 +58,7 @@ $$P(A) = \frac{\text{number of elements in A}}{\text{number of elements in the
 $$0$$ probability means an event won't happen. It means it is extremely
 extremely unlikely to happen.
 
-# Conditional Probability
+## Conditional Probability
 
 Everytime we are given a new information, we should revise our beliefs.
 
@@ -82,7 +82,7 @@ occured, then the additivity axiom holds for conditional probability:
 
 $$P(A \cup B \mid C) = P(A \mid C) + P(B \mid C)$$
 
-# Total Probability Theorem
+## Total Probability Theorem
 
 {: style="width: 100%;" class="center"}
 ![Partitioned Sample Space]( {{ 'assets/img/probability_notes/probability_sample_space_partition_fig_1.jpeg' | relative_url }} )
@@ -100,7 +100,7 @@ $$
 P(B) = P(A_1)P(B \mid A_1) + P(A_2)P(B \mid A_2) + P(A_3)P(B \mid A_3)
 $$
 
-# Bayes' rule
+## Bayes' rule
 
 Let the sample space be partitioned into three events $$A_1$$, $$A_2$$ and
 $$A_3$$ as shown in Fig 1. Now there is another event $$B$$. Given that $$B$$ has happened, we
@@ -121,3 +121,40 @@ $$
 
 Bayes' rule tells us that given an effect $$B$$, what are the chances of the
 cause being $$A_i$$.
+
+## Independence
+
+Suppose we are tossing a coin. We know that the probability of getting a head is
+$$P$$ and the probability of getting a tail is $$(1-P)$$. Suppose we toss the
+coin once. Then the probability of getting a head will be $$P$$. If we toss the
+coin a second time, the probability of getting a head will still be $$P$$. It
+won't change nomatter what was the outcome of the first toss. This is called
+even. The two tosses are independent events.
+
+Mathematically, we can write it as
+
+$$P(B \mid A) = P(B)$$
+
+if the occurance of $$A$$ provides no information on the occurance of $$B$$.
+
+In case of two independent events,
+
+$$P(A \cap B) = P(A)P(B \mid A) = P(A)P(B)$$
+
+Thus two events $$A$$ and $$B$$ are said to be independent if 
+
+
+$$P(A \cap B) = P(A)P(B)$$
+
+NOTE: Disjoint events doesn't mean they are independent. Ex: In a sample space,
+suppose there are two disjoint events $$A$$ and $$B$$. Then if we know that event
+$$A$$ has occured, we can say that event $$B$$ has not occured.
+
+### Conditional Independence
+
+Given an event $$C$$ has occured, two events $$A$$ and $$B$$ are said to be
+conditionally independent, if 
+
+$$P(A \cap B \mid C) = P(A \mid C) P(B \mid C)$$
+
+## Discrete Random Variables
