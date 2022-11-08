@@ -5,7 +5,7 @@ permalink: "probability_notes"
 idate: 2022-10-02 16:00 # Post creation date
 date: 2022-10-02 16:00 # Post update date
 tags: [""]
-category:
+category: top
 description: ""
 ---
 
@@ -157,4 +157,4 @@ conditionally independent, if
 
 $$P(A \cap B \mid C) = P(A \mid C) P(B \mid C)$$
 
-## Discrete Random Variables
+5. [ [Counting] ]( {% post_url 2022-11-04-counting %} ) 
