@@ -58,133 +58,202 @@ $post-toc-content: 15px !default;
   clear: both;
 }
 
-.site-header {
-  min-height: $spacing-unit * 1.865;
-  padding-bottom: 10px;
-  //padding-bottom: 10px;
-  // Positioning context for the mobile navigation icon
-  position: relative;
-border-bottom: 1px solid $text-color;
-}
-.header-wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  @extend %clearfix;
-}
 .site-title {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: -1px;
-  float: left;
-  color: #FFFFFF;
-  text-decoration: none;
-      &,
-      &:visited {
-          color: #FFFFFF;
-      }
+  font-family: 'Roboto Mono', monospace;
 }
-.site-nav {
-   float: left;
-  .page-link {
-      margin-right: 10px;
-      &,
-      &:hover {
-          color: #FF4F00;
-      }
-  }
+
+.nav-item {
+  letter-spacing: -1px;
+  font-family: 'Roboto Mono', monospace;
 }
 body {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 10px;
-  font: 16px/1.5  ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color Apple Color Emoji;
-  color: $text-color;
-  display: flex;
-  min-height: 90vh;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* replace with stretch when standardized */
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.009375rem;
+    background-color: #121212; /* grey50 */
+    color: rgba(255, 255, 255, 0.87); /* 87% white */
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
 }
-main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+
+a {
+    color: #90caf9; /* blue800 */
+    text-decoration: none;
 }
-h1,
-h2,
+
+a:visited {
+    color: #90caf9; /* purple800 */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+    color: rgba(255, 255, 255, 0.87); /* 87% white */
+}
+
+h1 {
+    /* Display small */
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    letter-spacing: 0;
+}
+
+h2 {
+    /* Headline small */
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+}
+
 h3 {
-  line-height: 1.2;
+    /* Title large */
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0;
 }
-h2,
-h3,
+
 h4 {
-    font-style: italic;
+    /* Title medium */
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.009375rem;
 }
 
-%vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+h5 {
+    /* Title small */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.00625rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: $text-color;
-    background: $background-color;
-  }
-
-  a:link {
-    color: $brand-color;
-  }
-
-  a:visited {
-    color: $brand-color;
-  }
+h6 {
+    /* Label small */
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    letter-spacing: 0.03125rem;
 }
-.page-content {
-  flex: 1;
-}
-.site-footer {
-border-top: 1px solid $text-color;
-padding: 30px;
-}
-.footer-wrapper {
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-.footer-left {
-    float: left;
 
-  .footer-link {
-    // Gaps between nav items, but not on the last one
-      margin-right: 5px;
-  }
-  }
-.footer-right {
-    float: right;
+code, pre {
+        background-color: #424242; /* grey800 */
+    }
 
-  .footer-link {
-    // Gaps between nav items, but not on the last one
-      margin-left: 5px;
-  }
-  }
+pre {
+    overflow-x: auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+code {
+    border-radius: 2.5px;
+}
+
+#site-menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#site-menu {
+    background-color: #212121; /* grey900 */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.20);
+    white-space: nowrap;
+}
+
+#site-menu ul li {
+    list-style-type: none;
+    display: flex;
+}
+
+#site-menu ul li:hover {
+    background-color: #424242; /* grey800 */
+}
+
+#site-menu ul li a {
+    color: #fff; /* 100% white */
+    display: flex;
+    text-decoration: none;
+    padding: 1em;
+    align-items: center;
+}
+
+#site-menu ul li a:visited {
+    color: #fff; /* 100% white */
+}
+
+#site-menu ul li[aria-current] a {
+    color: #64b5f6; /* blue300 */
+}
+
+#site-menu img {
+    height: 1.8rem;
+    width: 1.8rem;
+    filter: invert(100);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+#site-menu ul li[aria-current] img {
+    filter: invert(60%) sepia(24%) saturate(997%) hue-rotate(168deg) brightness(107%) contrast(93%);
+}
+
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    max-width: 832px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+footer img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    display: block;
+    margin-top: auto;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+footer a, footer a:visited {
+    color: #9f9f9f;
+}
+
+#social {
+    padding: 0;
+    list-style-type: none;
+}
+
+#social li {
+    display: inline;
+    padding: 0.5em 0.5em;
+}
+
 .post-meta {
   color: $grey-color-light;
 }
-/**
- * Code formatting
- */
-pre,
-code {
-  padding: 0px;
-  font-size: $code-font-size;
-  border: 1px solid $grey-color-dark;
-  background-color: $code-background;
-  overflow-x: auto;
-}
-
-code {
-  padding: 1px 3px;
-  border-radius: 0px;
-  color: $code-color;
-}
-
-pre > code {
-  display: block;
+.post-title {
+  color: rgba(255, 255, 255, 0.87); /* 87% white */
 }
 
 #markdown-toc::before {
@@ -195,7 +264,6 @@ pre > code {
 }
 
 #markdown-toc ul {
-    list-style: decimal;
 }
 
 #markdown-toc {
@@ -205,7 +273,6 @@ pre > code {
     padding: 10px 20px;
     position: relative;
     padding-left: 3em;
-    list-style: decimal;
     //font-size: $post-toc-content;
     word-wrap: break-word;
 }
@@ -240,7 +307,7 @@ color: #888;
   margin: 2em 0;
   padding: 10px 20px;
   position: relative;
-  background-color: $background-color;
+  background-color: #212121;
   border-left-color: #FF4F00;
   border-left-style: solid;
   border-left-width: 3px;
