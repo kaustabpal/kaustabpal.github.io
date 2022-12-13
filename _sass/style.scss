@@ -64,7 +64,8 @@ $post-toc-content: 15px !default;
   letter-spacing: -1px;
   font-family: 'Share Tech Mono', monospace;
   background-color: #df671b;
-  color: #000;
+  color: #212121;
+  padding: 0.5em;
 }
 
 #site-title ul li a {
@@ -79,6 +80,47 @@ $post-toc-content: 15px !default;
   letter-spacing: -1px;
   font-family: 'Anonymous Pro', monospace; 
   color: #fff;
+  padding: 0.5em;
+  padding-left: 1em;
+}
+
+
+#site-menu {
+    background-color: #212121; /* grey900 */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.20);
+    white-space: nowrap;
+}
+
+#site-menu ul li {
+    list-style-type: none;
+    display: flex;
+}
+
+#site-menu ul li:hover {
+    background-color: #424242; /* grey800 */
+}
+
+#site-menu ul li a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+#site-menu ul li[aria-current] a {
+    color: #64b5f6; /* blue300 */
+}
+
+#site-menu img {
+    height: 1.8rem;
+    width: 1.8rem;
+    filter: invert(100);
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+#site-menu ul li[aria-current] img {
+    filter: invert(60%) sepia(24%) saturate(997%) hue-rotate(168deg) brightness(107%) contrast(93%);
 }
 
 body {
@@ -177,44 +219,6 @@ code {
     padding: 0;
 }
 
-#site-menu {
-    background-color: #212121; /* grey900 */
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.20);
-    white-space: nowrap;
-}
-
-#site-menu ul li {
-    list-style-type: none;
-    display: flex;
-}
-
-#site-menu ul li:hover {
-    background-color: #424242; /* grey800 */
-}
-
-#site-menu ul li a {
-    display: flex;
-    text-decoration: none;
-    padding: 1em;
-    align-items: center;
-}
-
-
-#site-menu ul li[aria-current] a {
-    color: #64b5f6; /* blue300 */
-}
-
-#site-menu img {
-    height: 1.8rem;
-    width: 1.8rem;
-    filter: invert(100);
-    vertical-align: middle;
-    margin-right: 0.5rem;
-}
-
-#site-menu ul li[aria-current] img {
-    filter: invert(60%) sepia(24%) saturate(997%) hue-rotate(168deg) brightness(107%) contrast(93%);
-}
 
 
 main {
