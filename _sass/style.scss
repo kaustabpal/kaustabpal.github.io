@@ -62,7 +62,6 @@ $post-toc-content: 15px !default;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: -1px;
-  font-family: 'Share Tech Mono', monospace;
   background-color: #df671b;
   color: #212121;
   padding: 0.5em;
@@ -78,7 +77,6 @@ $post-toc-content: 15px !default;
 
 #nav-item {
   letter-spacing: -1px;
-  font-family: 'Anonymous Pro', monospace; 
   color: #fff;
   padding: 0.5em;
   padding-left: 1em;
@@ -128,9 +126,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-height: -webkit-fill-available; /* replace with stretch when standardized */
-    font-family: Roboto, sans-serif;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
     line-height: 1.5;
-    letter-spacing: 0.009375rem;
+    letter-spacing: -1px;
     background-color: #151515; /* grey50 */
     color: rgba(255, 255, 255, 0.87); /* 87% white */
     margin: 0;
