@@ -7,7 +7,7 @@ $on-palm:          600px !default;
 $on-laptop:        700px !default;
 
 $text-color:       #d9d9d9 !default;
-$background-color: #000000 !default;
+$background-color: #0b0b0d !default;
 $brand-color:      #58a6ff !default;
 
 $grey-color:       #6e6e73 !default;
@@ -73,7 +73,7 @@ $post-toc-content: 15px !default;
 
 
 #nav-item {
-  letter-spacing: -1px;
+  //letter-spacing: -1px;
   font-weight: 600;
   color: #0b0b0d;
   padding: 0.5em;
@@ -104,31 +104,32 @@ $post-toc-content: 15px !default;
 }
 
 
-#site-menu ul li[aria-current] a {
-    color: #64b5f6; /* blue300 */
-}
+//#site-menu ul li[aria-current] a {
+//    color: ##64b5f664b5f6; /* blue300 */
+//}
 
-#site-menu img {
-    height: 1.8rem;
-    width: 1.8rem;
-    filter: invert(100);
-    vertical-align: middle;
-    margin-right: 0.5rem;
-}
+//#site-menu img {
+//    height: 1.8rem;
+//    width: 1.8rem;
+//    filter: invert(100);
+//    vertical-align: middle;
+//    margin-right: 0.5rem;
+//}
 
-#site-menu ul li[aria-current] img {
-    filter: invert(60%) sepia(24%) saturate(997%) hue-rotate(168deg) brightness(107%) contrast(93%);
-}
+//#site-menu ul li[aria-current] img {
+//    filter: invert(60%) sepia(24%) saturate(997%) hue-rotate(168deg) brightness(107%) contrast(93%);
+//}
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* replace with stretch when standardized */
+    min-height: 95vh;
+    //min-height: -webkit-fill-available; /* replace with stretch when standardized */
     font-family: 'Roboto Mono', monospace !important;
+    font-size: 12.5px;
     line-height: 1.5;
-    letter-spacing: -1px;
-    background-color: #0b0b0d; /* grey50 */
+    //letter-spacing: -1px;
+    background-color: $background-color;
     color: $text-color; /* 87% white */
     margin: 0;
     padding: 0;
@@ -149,16 +150,16 @@ a:hover {
     color: #07b7ec
 }
 
-h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
-    color: rgba(255, 255, 255, 0.87); /* 87% white */
-}
+//h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+//    color: rgba(255, 255, 255, 0.87); /* 87% white */
+//}
 
 h1 {
     /* Display small */
     font-size: 2.25rem;
     line-height: 2.75rem;
     letter-spacing: 0;
-    color: #4584ff;
+    //color: #e13738;
 }
 
 h2 {
@@ -204,13 +205,14 @@ h6 {
 }
 
 code, pre {
-        background-color: #424242; /* grey800 */
+        background-color: $background-color;
     }
 
 pre {
     overflow-x: auto;
     border-radius: 5px;
     padding: 10px;
+    border: 1px solid $orange-light;
 }
 
 code {
@@ -230,12 +232,13 @@ code {
 main {
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
-    max-width: 832px;
+    //padding: 1em;
+    max-width: 600px;
     min-width: 0;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     overflow-wrap: break-word;
+    margin-bottom: auto;
 }
 
 footer img {
@@ -248,18 +251,23 @@ footer img {
 
 footer {
     display: block;
-    margin-top: auto;
     overflow-wrap: break-word;
-    text-align: center;
-}
-
-footer a, footer a:visited {
-    color: #9f9f9f;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: 100px;
 }
 
 #social {
     padding: 0;
+    margin-left: 0px;
     list-style-type: none;
+    color: $text-color;
+}
+#social a, #social a:visited {
+    color: $orange-light;
+}
+#social a:hover {
+    color: #4584ff;
 }
 
 #social li {
@@ -271,7 +279,9 @@ footer a, footer a:visited {
   color: $grey-color-light;
 }
 .post-title {
-  color: rgba(255, 255, 255, 0.87); /* 87% white */
+    color: $text-color;
+  //color: #4584ff;
+  //color: rgba(255, 255, 255, 0.87); /* 87% white */
 }
 
 #markdown-toc::before {
@@ -325,7 +335,7 @@ color: #888;
   margin: 2em 0;
   padding: 10px 20px;
   position: relative;
-  background-color: #212121;
+  background-color: #121212;
   border-left-color: #df671b;
   border-left-style: solid;
   border-left-width: 3px;
@@ -335,12 +345,13 @@ color: #888;
   word-wrap: break-word;
 }
 .post-list-heading {
- font-size: 1.5em;
+ //font-size: 1.5em;
 }
 .post-list {
   margin-left: 0;
   list-style: none;
   line-height: 2.0;
+  font-size: 1.0em;
 }
 /**
  * Lists
