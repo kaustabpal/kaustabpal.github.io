@@ -1,6 +1,6 @@
 baseURL = 'https://kaustabpal.github.io/'
 languageCode = 'en-us'
-title = 'kaustabpal'
+title = 'Kaustab Pal'
 
 [markup]
   [markup.goldmark]
