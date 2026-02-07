@@ -1,5 +1,5 @@
 +++
-date = '2025-12-09T19:35:44+05:30'
+date = '2025-07-09T19:35:44+05:30'
 draft = true
 title = 'Neural Network: Regularization'
 math = true
