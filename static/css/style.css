@@ -419,7 +419,8 @@ bg-light #recent-posts a {
 
 .reading-time {
     font-style: italic;
-    opacity: .7;
+    /* opacity: .7; */
+    color: #6e6e6e
 }
 
 .content-divider {
@@ -806,7 +807,8 @@ details[open] summary~* {
     .post-date,
     .post-tags {
         font-size: 14px;
-        opacity: .7;
+        /* opacity: .7; */
+        color: #6e6e6e;
     }
 }
 
