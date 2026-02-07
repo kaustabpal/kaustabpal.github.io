@@ -1,7 +1,409 @@
 {{ define "main" }}
-<div class="container" style="text-align: center; padding-top: 5rem;">
-    <h1>404 - Page Not Found</h1>
-    <p>Oops! The page you are looking for does not exist.</p>
-    <a href="/" style="text-decoration: underline;">Go Home</a>
+
+<style>
+    /* Inline overrides for standalone 404 page */
+    /* body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'DepartureMono', 'Roboto Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        } */
+
+    /* Background grid/noise handled by main style.css CRT overlay */
+
+    .terminal-container {
+        text-align: center;
+        z-index: 10;
+        max-width: 800px;
+        padding: 2rem;
+    }
+
+    /* Large 404 Glitch Text */
+    .error-code {
+        /* font-family: 'Inter', sans-serif; */
+        font-size: 12rem;
+        font-weight: 900;
+        line-height: 1;
+        margin: 0;
+        color: #fff;
+        /* text-shadow: 0 0 20px rgba(255, 255, 255, 0.9); */
+        position: relative;
+        animation: glitch-skew 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+    }
+
+    .error-code::before,
+    .error-code::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0d0d0d;
+    }
+
+    .error-code::before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00c1;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+    }
+
+    .error-code::after {
+        left: -2px;
+        text-shadow: -2px 0 #00fff9;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+    }
+
+    .error-message {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .error-description {
+        margin-top: 2rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #888;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .command-prompt {
+        margin-top: 3rem;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .command-line {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .prompt {
+        color: #ff7900;
+        margin-right: 0.5rem;
+    }
+
+    .command-link {
+        color: #e0e0e0;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .command-link:hover {
+        color: #ff7900;
+        border-bottom: 1px solid #ff7900;
+        text-shadow: 0 0 8px rgba(255, 121, 0, 0.5);
+    }
+
+    .cursor {
+        display: inline-block;
+        width: 10px;
+        height: 1.2em;
+        background-color: #ff7900;
+        vertical-align: text-bottom;
+        animation: blink 1s step-end infinite;
+    }
+
+    .system-status {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 0.8rem;
+        color: #555;
+        text-align: right;
+    }
+
+    .system-status a {
+        color: #666;
+        text-decoration: none;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .system-status a:hover {
+        color: #ff7900;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes glitch-anim {
+        0% {
+            clip: rect(35px, 9999px, 86px, 0);
+            transform: skew(0.55deg);
+        }
+
+        5% {
+            clip: rect(69px, 9999px, 3px, 0);
+            transform: skew(0.39deg);
+        }
+
+        10% {
+            clip: rect(52px, 9999px, 86px, 0);
+            transform: skew(0.06deg);
+        }
+
+        15% {
+            clip: rect(10px, 9999px, 78px, 0);
+            transform: skew(0.97deg);
+        }
+
+        20% {
+            clip: rect(93px, 9999px, 20px, 0);
+            transform: skew(0.34deg);
+        }
+
+        25% {
+            clip: rect(21px, 9999px, 92px, 0);
+            transform: skew(0.68deg);
+        }
+
+        30% {
+            clip: rect(31px, 9999px, 98px, 0);
+            transform: skew(0.38deg);
+        }
+
+        35% {
+            clip: rect(66px, 9999px, 5px, 0);
+            transform: skew(0.79deg);
+        }
+
+        40% {
+            clip: rect(97px, 9999px, 14px, 0);
+            transform: skew(0.66deg);
+        }
+
+        45% {
+            clip: rect(34px, 9999px, 45px, 0);
+            transform: skew(0.96deg);
+        }
+
+        50% {
+            clip: rect(3px, 9999px, 17px, 0);
+            transform: skew(0.68deg);
+        }
+
+        55% {
+            clip: rect(96px, 9999px, 85px, 0);
+            transform: skew(0.12deg);
+        }
+
+        60% {
+            clip: rect(44px, 9999px, 66px, 0);
+            transform: skew(0.65deg);
+        }
+
+        65% {
+            clip: rect(74px, 9999px, 9px, 0);
+            transform: skew(0.08deg);
+        }
+
+        70% {
+            clip: rect(20px, 9999px, 94px, 0);
+            transform: skew(0.81deg);
+        }
+
+        75% {
+            clip: rect(66px, 9999px, 50px, 0);
+            transform: skew(0.32deg);
+        }
+
+        80% {
+            clip: rect(8px, 9999px, 77px, 0);
+            transform: skew(0.89deg);
+        }
+
+        85% {
+            clip: rect(11px, 9999px, 33px, 0);
+            transform: skew(0.35deg);
+        }
+
+        90% {
+            clip: rect(80px, 9999px, 59px, 0);
+            transform: skew(0.38deg);
+        }
+
+        95% {
+            clip: rect(54px, 9999px, 86px, 0);
+            transform: skew(0.3deg);
+        }
+
+        100% {
+            clip: rect(14px, 9999px, 71px, 0);
+            transform: skew(0.24deg);
+        }
+    }
+
+    @keyframes glitch-anim2 {
+        0% {
+            clip: rect(65px, 9999px, 100px, 0);
+            transform: skew(0.69deg);
+        }
+
+        5% {
+            clip: rect(52px, 9999px, 74px, 0);
+            transform: skew(0.85deg);
+        }
+
+        10% {
+            clip: rect(79px, 9999px, 85px, 0);
+            transform: skew(0.04deg);
+        }
+
+        15% {
+            clip: rect(75px, 9999px, 5px, 0);
+            transform: skew(0.4deg);
+        }
+
+        20% {
+            clip: rect(67px, 9999px, 61px, 0);
+            transform: skew(0.53deg);
+        }
+
+        25% {
+            clip: rect(14px, 9999px, 82px, 0);
+            transform: skew(0.28deg);
+        }
+
+        30% {
+            clip: rect(7px, 9999px, 31px, 0);
+            transform: skew(0.37deg);
+        }
+
+        35% {
+            clip: rect(62px, 9999px, 90px, 0);
+            transform: skew(0.79deg);
+        }
+
+        40% {
+            clip: rect(34px, 9999px, 15px, 0);
+            transform: skew(0.49deg);
+        }
+
+        45% {
+            clip: rect(17px, 9999px, 4px, 0);
+            transform: skew(0.96deg);
+        }
+
+        50% {
+            clip: rect(62px, 9999px, 63px, 0);
+            transform: skew(0.54deg);
+        }
+
+        55% {
+            clip: rect(11px, 9999px, 60px, 0);
+            transform: skew(0.2deg);
+        }
+
+        60% {
+            clip: rect(54px, 9999px, 90px, 0);
+            transform: skew(0.7deg);
+        }
+
+        65% {
+            clip: rect(78px, 9999px, 7px, 0);
+            transform: skew(0.44deg);
+        }
+
+        70% {
+            clip: rect(21px, 9999px, 68px, 0);
+            transform: skew(0.5deg);
+        }
+
+        75% {
+            clip: rect(56px, 9999px, 20px, 0);
+            transform: skew(0.97deg);
+        }
+
+        80% {
+            clip: rect(70px, 9999px, 97px, 0);
+            transform: skew(0.25deg);
+        }
+
+        85% {
+            clip: rect(24px, 9999px, 30px, 0);
+            transform: skew(0.61deg);
+        }
+
+        90% {
+            clip: rect(32px, 9999px, 64px, 0);
+            transform: skew(0.86deg);
+        }
+
+        95% {
+            clip: rect(70px, 9999px, 32px, 0);
+            transform: skew(0.72deg);
+        }
+
+        100% {
+            clip: rect(65px, 9999px, 2px, 0);
+            transform: skew(0.49deg);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .error-code {
+            font-size: 8rem;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+        }
+
+        .terminal-container {
+            padding: 1rem;
+        }
+
+        .system-status {
+            display: none;
+        }
+    }
+</style>
+
+<div class=" container terminal-container">
+    <h1 class="error-code" data-text="404">404</h1>
+    <div class="error-message">ERROR: Destination Out of bounds.</div>
+    <p class="error-description">
+        The autonomous navigation system failed find a valid path. This page may be out of bounds, or it never
+        existed in the current map data.
+    </p>
+
+    <div class="command-prompt">
+        <!-- <div class="command-line">
+            <span class="prompt">&gt;</span> cd <a href="/" class="command-link">/home_dashboard/</a>
+        </div> -->
+        <div class="command-line">
+            <span class="prompt">&gt;</span> <a href="/" class="command-link">[return to base]</a><span
+                class="cursor"></span>
+        </div>
+    </div>
 </div>
-{{ end }}
+
+{{end}}
