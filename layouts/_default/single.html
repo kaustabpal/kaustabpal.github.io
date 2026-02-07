@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container">
+    <article>
+        <h1 class="article-title">{{ .Title }}</h1>
+        <div class="post-metadata">
+            <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+            <span class="metadata-separator">•</span>
+            <span class="reading-time">{{ .ReadingTime }} min read</span>
+        </div>
+        <div class="content-divider"></div>
+
+        {{ if .TableOfContents }}
+        <div class="toc-container">
+            <details open>
+                <summary>Table of Contents</summary>
+                {{ .TableOfContents }}
+            </details>
+        </div>
+        {{ end }}
+
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+    </article>
+</div>
+{{ end }}

@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="container home-page">
+    <div class="text-content left-content">
+        <h1>Who am I?</h1>
+        <p>I’m an engineer working at the intersection of deep learning and autonomous driving. I enjoy understanding
+            how data-driven algorithms are used to build real-world products, how they scale to serve
+            millions of users, where they break, and how theory holds up under real-world constraints. The problems that
+            motivate me most are the ones where strong foundations turn into measurable impact.
+            <br><br>
+
+            This blog is primarily a documentation space for me. It is a place where I think in public, break down
+            systems, and write to clarify my own understanding. It is not optimized for readers, but if any of it helps
+            you along the way, I am genuinely glad. <br><br>
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+
+    <section id="recent-posts">
+        <h2>Technical Notes</h2>
+        <ul>
+            {{ range first 5 (where .Site.RegularPages "Type" "notes") }}
+            <div class="post-card">
+                <li class="post-item">
+                    <span class="post-date">{{ .Date.Format "02-01-2006" }}</span>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            </div>
+            {{ end }}
+        </ul>
+    </section>
+
+    <p class="see-all"> <a href="/notes">See all notes</a></p>
+    <div class="divider"></div>
+
+</div>
+{{ end }}
