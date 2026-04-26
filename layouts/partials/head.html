@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<link rel="preload" href="/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/GeistMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+{{ $css := resources.Get "css/style.css" | minify }}
+<style>{{ $css.Content | safeCSS }}</style>
+<script>
+  (function(){
+    var k='kp-theme';
+    try{
+      var s=localStorage.getItem(k);
+      var p=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+      if((s||p)==='light'){document.documentElement.classList.add('theme-light');}
+    }catch(_){}
+  })();
+</script>

@@ -130,7 +130,7 @@ Each observation in our environment is an array of 4 numbers where each number
 represents the cart position, cart velocity, pole angle and pole angular
 velocity respectively. Example of an observation:
 
-```
+```python
 [-0.061586   -0.75893141  0.05793238  1.15547541]
 ```
 

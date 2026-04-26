@@ -1,23 +1,21 @@
-<header>
-    <div class="container">
-        <nav>
-            <div class="nav-container container">
-                <div class="initials-logo">
-                    <a href="/">
-                        <span class="letter-k" data-text="K">K</span><span class="letter-p" data-text="P">P</span>
-                    </a>
-                </div>
-                <ul class="nav-links flex-list">
-                    <li><a href="/notes">Notes</a></li>
-
-                    <!-- <li> <button id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
-                            ☀️
-                        </button> </li> -->
-                </ul>
-            </div>
-        </nav>
-        <div>
-            <div class="divider special-divider"></div>
-        </div>
+<header class="site-header">
+  <div class="site-wrapper">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="/">KP</a>
+      </div>
+      <nav class="header-nav">
+        <a class="action-btn{{ if eq .Section "notes" }} active{{ end }}" href="/notes/">
+          <span class="action-btn-key">↗</span>
+          <span class="action-btn-label">Notes</span>
+        </a>
+      </nav>
+      <div class="header-actions">
+        <button class="action-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="action-btn-key" id="theme-key">○</span>
+          <span class="action-btn-label" id="theme-label">Light</span>
+        </button>
+      </div>
     </div>
+  </div>
 </header>

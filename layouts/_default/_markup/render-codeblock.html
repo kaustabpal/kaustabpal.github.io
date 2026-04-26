@@ -1,0 +1,11 @@
+{{- $lang := .Type | upper -}}
+{{- if .Type -}}
+  {{- $result := transform.HighlightCodeBlock . -}}
+  {{- $wrapped := printf "%s" $result.Wrapped -}}
+  {{- $wrapped = replace $wrapped `<div class="highlight">` (printf `<div class="highlight" data-lang="%s">` $lang) 1 -}}
+  {{- $wrapped | safeHTML -}}
+{{- else -}}
+  {{- $code := strings.TrimRight "\n" .Inner -}}
+  {{- $lines := split $code "\n" -}}
+  <div class="highlight" data-lang="TEXT"><pre tabindex="0" class="chroma"><code>{{- range $i, $line := $lines -}}<span class="line"><span class="ln">{{ add $i 1 }}</span><span class="cl">{{ $line }}</span></span>{{- end -}}</code></pre></div>
+{{- end -}}
