@@ -1,7 +1,7 @@
 ---
 title: "How Autonomous Vehicles Fail"
 date: 2026-04-18
-draft: false
+draft: true
 tags: ["autonomous-driving", "systems"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Understanding Attention Mechanisms"
 date: 2026-04-10
-draft: false
+draft: true
 tags: ["deep-learning", "transformers"]
 ---
 
